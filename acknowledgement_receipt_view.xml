@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+    <data>
+
+           <record model="ir.ui.view" id="glimsol_acknowledgment_receipt_form_view">
+                <field name="name">glimsol.acknowledgement.receipt.form</field>
+                <field name="model">glimsol.acknowledgment.receipt</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="Acknowledgment Receipt">
+						<field name='total_cash_amount'/>
+						<field name='total_check_amount'/>
+						<field name='total_check_number'/>
+						<field name='journal_id'/>
+						<field name='total_amount_in_words'/>
+						<field name='payment_description'/>
+						<field name='notes'/>
+						<field name='date'/>
+						<field name='cdos_reference'/>
+						<field name='invoice_id'/>
+						<field name='recieve_user_id'/>
+                    </form>
+                </field>
+            </record>    
+    
+    
+        <record id="view_invoice_customer_inherit2" model="ir.ui.view">
+            <field name="name">account.invoice.acknowledgment.receipt</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="view_invoice_customer_inherit"/>
+            <field name="arch" type="xml">
+                   <button name="invoice_check_deposit" type="object" string="Check Deposit" 
+                   attrs="{'invisible': ['|', ('state','!=','open'), ('sent','=',True)]}" groups="base.group_user" position="after">
+                    <button name="invoice_acknowledgment_receipt" type="object" string="Check Deposit" 
+                    attrs="{'invisible': ['|', ('state','!=','open'), ('sent','=',True)]}" groups="base.group_user"/>                        
+                </button>
+					<button name="invoice_check_deposit" type="object" string="Check Deposit"
+                   attrs="{'invisible': ['|', ('state','!=','open'), ('sent','=',False)]}" class="oe_highlight" position="after">                        
+  						<button name="invoice_acknowledgment_receipt" type="object" string="Check Deposit"
+                   		attrs="{'invisible': ['|', ('state','!=','open'), ('sent','=',False)]}" class="oe_highlight"/>
+                    </button>
+            </field>
+        </record>        
+    
+    </data>
+</openerp>

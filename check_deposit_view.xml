@@ -1,0 +1,90 @@
+<openerp>
+    <data>
+    
+               <record model="ir.ui.view" id="glimsol_check_deposit_line_form_view">
+                <field name="name">glimsol.check.deposit.line.form</field>
+                <field name="model">glimsol.check.deposit.line</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="Check Deposits">
+                    	<field name="bank_id"/>
+                    	<field name="check_number"/>
+                    	<field name="date"/>
+                    	<field name="amount"/>
+                    	<field name="journal_id"/>
+                    	<field name="period_id"/>
+                    	<field name="state"/>
+                
+                    </form>
+                </field>
+            </record>
+            
+            <record model="ir.ui.view" id="glimsol_check_deposit_line_tree_view">
+                <field name="name">glimsol.check.deposit.line.tree</field>
+                <field name="model">glimsol.check.deposit.line</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="Check Deposits">
+                    	<field name="bank_id"/>
+                    	<field name="check_number"/>
+                    	<field name="date"/>
+                    	<field name="amount"/>
+                    	<field name="journal_id"/>
+                    	<field name="period_id"/>
+                    	<field name="state"/>
+                
+                    </tree>
+                </field>
+            </record>
+    
+    
+    
+
+    
+           <record model="ir.ui.view" id="glimsol_check_deposit_form_view">
+                <field name="name">glimsol.check.deposit.form.view</field>
+                <field name="model">glimsol.check.deposit</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="Check Deposit">
+                    	<group>
+	                    	<group>
+	                        <field name="partner_id"/>
+	                        <field name="date"/>
+	                        </group>
+	                        <group>
+	                        <field name="invoice_id"/>
+	                        </group>
+	                    </group>
+	                    <newline/>
+	                    <group>
+                        	<field name="line_ids" nolabel="1"/>
+                        	</group>
+                    </form>
+                </field>
+            </record>
+    
+        <record id="view_invoice_customer_inherit" model="ir.ui.view">
+            <field name="name">account.invoice.check.deposit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account_voucher.view_invoice_customer"/>
+            <field name="arch" type="xml">
+                    <button name="invoice_pay_customer" type="object" string="Register Payment"
+                        attrs="{'invisible': ['|', ('state','!=','open'), ('sent','=',True)]}" groups="base.group_user" position="after">
+                        <button name="invoice_check_deposit" type="object" string="Check Deposit" 
+                        attrs="{'invisible': ['|', ('state','!=','open'), ('sent','=',True)]}" groups="base.group_user" />
+                        
+                    </button>
+                    <button name="invoice_pay_customer" type="object" string="Register Payment"
+                        attrs="{'invisible': ['|', ('state','!=','open'), ('sent','=',False)]}" class="oe_highlight" groups="base.group_user"  position="after">
+
+						<button name="invoice_check_deposit" type="object" string="Check Deposit"
+                        attrs="{'invisible': ['|', ('state','!=','open'), ('sent','=',False)]}" class="oe_highlight" groups="base.group_user"/>                        
+                        
+                    </button>
+            </field>
+        </record>    
+    
+    
+    </data>
+</openerp>
