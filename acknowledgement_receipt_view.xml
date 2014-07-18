@@ -32,12 +32,12 @@
             <field name="arch" type="xml">
                    <button name="invoice_check_deposit" type="object" string="Check Deposit" 
                    attrs="{'invisible': ['|', ('state','!=','open'), ('sent','=',True)]}" groups="base.group_user" position="after">
-                    <button name="invoice_acknowledgment_receipt" type="object" string="Check Deposit" 
+                    <button name="invoice_acknowledgment_receipt" type="object" string="Acknowledgement Receipt" 
                     attrs="{'invisible': ['|', ('state','!=','open'), ('sent','=',True)]}" groups="base.group_user"/>                        
                 </button>
 					<button name="invoice_check_deposit" type="object" string="Check Deposit"
                    attrs="{'invisible': ['|', ('state','!=','open'), ('sent','=',False)]}" class="oe_highlight" position="after">                        
-  						<button name="invoice_acknowledgment_receipt" type="object" string="Check Deposit"
+  						<button name="invoice_acknowledgment_receipt" type="object" string="Acknowledgement Receipt"
                    		attrs="{'invisible': ['|', ('state','!=','open'), ('sent','=',False)]}" class="oe_highlight"/>
                     </button>
             </field>

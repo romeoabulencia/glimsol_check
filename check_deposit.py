@@ -64,7 +64,7 @@ class invoice(osv.osv):
 
     def invoice_check_deposit(self, cr, uid, ids, context=None):
         if not ids: return []
-        dummy, view_id = self.pool.get('ir.model.data').get_object_reference(cr, uid, 'glimsol_check_deposit', 'glimsol_check_deposit_form_view')
+        dummy, view_id = self.pool.get('ir.model.data').get_object_reference(cr, uid, 'glimsol_check', 'glimsol_check_deposit_form_view')
 
         inv = self.browse(cr, uid, ids[0], context=context)
         return {
