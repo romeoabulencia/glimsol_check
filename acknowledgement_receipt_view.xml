@@ -2,21 +2,22 @@
 
 <openerp>
     <data>
+<!--     <report auto="False" id="report_acknowledgement_receipt" model="glimsol.acknowledgement.receipt" name="glimsol.acknowledgement.receipt" 
+rml="glimsol_report/report/sale_order.rml" string="Acknowledgement Receipt"/> -->
 
-           <record model="ir.ui.view" id="glimsol_acknowledgment_receipt_form_view">
+           <record model="ir.ui.view" id="glimsol_acknowledgement_receipt_form_view">
                 <field name="name">glimsol.acknowledgement.receipt.form</field>
-                <field name="model">glimsol.acknowledgment.receipt</field>
+                <field name="model">glimsol.acknowledgement.receipt</field>
                 <field name="type">form</field>
                 <field name="arch" type="xml">
                     <form string="Acknowledgment Receipt" version="7.0">
                     <group>
 	                    <group>
-	                  	
+		                  	<field name="name"/>
 							<field name='total_cash_amount'/>
 							<field name='total_check_amount'/>
 							<field name='total_check_number'/>
 							<field name='journal_id'/>
-							<field name='total_amount_in_words'/>
 						</group>
 						<group>
 							<field name='payment_description'/>
@@ -29,8 +30,15 @@
 						
 					<newline/>
 					<group colspan="4">
+							<field name='total_amount_in_words'/>
+					
 						<field name='notes'/>
 					</group>
+                <footer>
+                    <button name="print_report" string="Print" type="object" class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>					
                     </form>
                 </field>
             </record>    

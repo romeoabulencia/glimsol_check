@@ -27,7 +27,7 @@
     'description': """Glimsol Check Deposit""",
     'author': 'GLIMSOL',
     'depends': ['sale'],
-    'data': ['check_deposit_view.xml','acknowledgement_receipt_view.xml'],
+    'data': ['check_deposit_view.xml','acknowledgement_receipt_view.xml','glimsol_check_data.xml'],
     'demo': [],
     'test': [],
     'installable': True,

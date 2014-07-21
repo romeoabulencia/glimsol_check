@@ -38,7 +38,6 @@ class glimsol_check_deposit(osv.osv):
         return res    
 
     def _get_check_amount(self, cr, user, ids, name, attr, context=None):
-        print "_get_check_amount".upper()
         res = {}
         for obj in self.browse(cr, user, ids, context=context):
             res[obj.id]=sum([x.amount for x in obj.line_ids])
