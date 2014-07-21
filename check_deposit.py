@@ -82,6 +82,11 @@ class glimsol_check_deposit_line(osv.osv):
     
 class invoice(osv.osv):
     _inherit = 'account.invoice'
+    _name="account.invoice"
+    
+    _columns={
+              'check_deposit_ids':fields.one2many('glimsol.check.deposit', 'invoice_id', 'Check Deposit', required=False),
+              }
 
     def invoice_check_deposit(self, cr, uid, ids, context=None):
         if not ids: return []
@@ -89,7 +94,7 @@ class invoice(osv.osv):
 
         inv = self.browse(cr, uid, ids[0], context=context)
         #check for existing check deposit entry
-        target = self.pool.get('glimsol.check.deposit').search(cr,uid,[('invoice_id','=',inv.id)]) or 'new'
+        target = self.pool.get('glimsol.check.deposit').search(cr,uid,[('invoice_id','=',inv.id)])
         res = {
             'name':_("Check Deposit"),
             'view_mode': 'form',

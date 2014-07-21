@@ -8,18 +8,29 @@
                 <field name="model">glimsol.acknowledgment.receipt</field>
                 <field name="type">form</field>
                 <field name="arch" type="xml">
-                    <form string="Acknowledgment Receipt">
-						<field name='total_cash_amount'/>
-						<field name='total_check_amount'/>
-						<field name='total_check_number'/>
-						<field name='journal_id'/>
-						<field name='total_amount_in_words'/>
-						<field name='payment_description'/>
+                    <form string="Acknowledgment Receipt" version="7.0">
+                    <group>
+	                    <group>
+	                  	
+							<field name='total_cash_amount'/>
+							<field name='total_check_amount'/>
+							<field name='total_check_number'/>
+							<field name='journal_id'/>
+							<field name='total_amount_in_words'/>
+						</group>
+						<group>
+							<field name='payment_description'/>
+							<field name='date'/>
+							<field name='cdos_reference'/>
+							<field name='invoice_id'/>
+							<field name='recieve_user_id'/>
+						</group>	
+					</group>
+						
+					<newline/>
+					<group colspan="4">
 						<field name='notes'/>
-						<field name='date'/>
-						<field name='cdos_reference'/>
-						<field name='invoice_id'/>
-						<field name='recieve_user_id'/>
+					</group>
                     </form>
                 </field>
             </record>    
