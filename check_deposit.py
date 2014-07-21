@@ -20,16 +20,37 @@
 from openerp.osv import fields, osv
 import time
 from openerp.tools.translate import _
+from openerp import netsvc
+
 
 
 class glimsol_check_deposit(osv.osv):
     _name="glimsol.check.deposit"
+    
+    def check_deposit_save(self, cr, uid, ids, context=None):
+        return {'type': 'ir.actions.act_window_close'}
+
+        
+    def _get_check_number(self, cr, user, ids, name, attr, context=None):
+        res = {}
+        for obj in self.browse(cr, user, ids, context=context):
+            res[obj.id]=len(obj.line_ids)
+        return res    
+
+    def _get_check_amount(self, cr, user, ids, name, attr, context=None):
+        print "_get_check_amount".upper()
+        res = {}
+        for obj in self.browse(cr, user, ids, context=context):
+            res[obj.id]=sum([x.amount for x in obj.line_ids])
+        return res        
     
     _columns={
               'partner_id':fields.many2one('res.partner', 'Customer', required=True),
               'invoice_id':fields.many2one('account.invoice', 'Invoice No.',required=True),
               'date': fields.date('Date'), 
               'line_ids':fields.one2many('glimsol.check.deposit.line', 'cd_id', 'Check Deposit', required=False),
+              'cheque_number': fields.function(_get_check_number, method=True, type='integer', string='Total number of checks', store=True), 
+              'cheque_amount':fields.function(_get_check_amount, method=True, type='float', string='Total amount of checks', store=False)
               
                
               }
@@ -67,28 +88,26 @@ class invoice(osv.osv):
         dummy, view_id = self.pool.get('ir.model.data').get_object_reference(cr, uid, 'glimsol_check', 'glimsol_check_deposit_form_view')
 
         inv = self.browse(cr, uid, ids[0], context=context)
-        return {
+        #check for existing check deposit entry
+        target = self.pool.get('glimsol.check.deposit').search(cr,uid,[('invoice_id','=',inv.id)]) or 'new'
+        res = {
             'name':_("Check Deposit"),
             'view_mode': 'form',
             'view_id': view_id,
             'view_type': 'form',
             'res_model': 'glimsol.check.deposit',
+#            'res_id':target[0],
             'type': 'ir.actions.act_window',
             'nodestroy': True,
             'target': 'new',
             'domain': '[]',
             'context': {
-                        
-        #        'payment_expected_currency': inv.currency_id.id,
                 'default_partner_id': self.pool.get('res.partner')._find_accounting_partner(inv.partner_id).id,
-              #  'default_amount': inv.type in ('out_refund', 'in_refund') and -inv.residual or inv.residual,
-            #    'default_reference': inv.name,
-            #    'close_after_process': True,
-            #    'invoice_type': inv.type,
                 'default_invoice_id': inv.id,
-                #'default_type': inv.type in ('out_invoice','out_refund') and 'receipt' or 'payment',
-                #'type': inv.type in ('out_invoice','out_refund') and 'receipt' or 'payment'
             }
         }
+        if target:
+            res['res_id']=target[0]
+        return res
 
 invoice()    

@@ -46,7 +46,7 @@
                 <field name="model">glimsol.check.deposit</field>
                 <field name="type">form</field>
                 <field name="arch" type="xml">
-                    <form string="Check Deposit">
+                    <form string="Check Deposit" version="7.0">
                     	<group>
 	                    	<group>
 	                        <field name="partner_id"/>
@@ -58,8 +58,28 @@
 	                    </group>
 	                    <newline/>
 	                    <group>
-                        	<field name="line_ids" nolabel="1"/>
+                        	<field name="line_ids" nolabel="1">
+                        		<tree string="Checks" editable="bottom">
+			                    	<field name="bank_id"/>
+			                    	<field name="check_number"/>
+			                    	<field name="date"/>
+			                    	<field name="amount"/>
+			                    	<field name="journal_id"/>
+			                    	<field name="period_id"/>
+			                    	<field name="state"/>                        		
+                        		</tree>
+                        	</field>
+                        	
                         	</group>
+                        	<newline/>
+                            <group colspan="2" name="cheque_total">
+                            	<field name="cheque_number"/>
+                            	<field name="cheque_amount"/>
+                            </group>
+                    <footer>
+                        <button name="check_deposit_save" string="Save" class="oe_highlight" type="object"/> or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
                     </form>
                 </field>
             </record>
