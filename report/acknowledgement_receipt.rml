@@ -721,17 +721,18 @@
     </blockTable>
     <blockTable colWidths="90.0,90.0,90.0,90.0,90.0,90.0" style="Table13">
       <tr>
+      <para style="P4">[[ repeatIn(line_number(o.invoice_id.invoice_line),'line') ]]</para>
         <td>
-          <para style="P4">[[ line.line_number ]]</para>
+          <para style="P4">[[ line[0] ]]</para>
         </td>
         <td>
-          <para style="P4">[[ line.product_id.name ]]</para>
+          <para style="P4">[[ line[1].product_id.name ]]</para>
         </td>
         <td>
-          <para style="P4">[[ line.name ]]</para>
+          <para style="P4">[[ line[1].name ]]</para>
         </td>
         <td>
-          <para style="P4">[[ line.product_uom_qty ]]</para>
+          <para style="P4">[[ line[1].quantity ]]</para>
         </td>
         <td>
           <para style="P3">
