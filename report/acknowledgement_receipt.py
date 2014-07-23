@@ -134,4 +134,4 @@ class order(report_sxw.rml_parse):
             return False
         return group_id in [x.id for x in self.pool.get('res.users').browse(cr, uid, uid, context=context).groups_id]
 
-report_sxw.report_sxw('report.acknowledgement.receipt', 'glimsol.acknowledgement.receipt', 'addons/glimsol_report/report/sale_order.rml', parser=order)
+report_sxw.report_sxw('report.acknowledgement.receipt', 'glimsol.acknowledgement.receipt', 'addons/glimsol_check/report/acknowledgement_receipt.rml', parser=order)
