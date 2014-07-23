@@ -43,32 +43,41 @@ class order(report_sxw.rml_parse):
             'get_balance':self._get_balance,
             'get_monthly_payment':self._get_monthly_payment,
             'get_designation':self._get_designation,
-            'get_product_bundle_items':self._get_product_bundle_items,
+            'get_check_data':self._get_check_data,
+            'get_product_data':self._get_product_data
+#             'get_product_bundle_items':self._get_product_bundle_items,
         })
         
-    def _get_product_bundle_items(self,product_id,context=None):
-        cr=self.cr
-        uid = self.uid
-        #fetch connected product item entries
-
-        cr.execute('select id from product_item where product_id = %s' % product_id)
-        product_item_ids = [x[0] for x in cr.fetchall()]
-        res = self.pool.get('product.item').read(cr,uid,product_item_ids,['item_id','qty_uom','uom_id'])
-#         bundle_product_item_ids = [x[0] for x in cr.fetchall()]
-#         product_dicts=self.pool.get('product.product').read(cr,uid,bundle_product_item_ids,['name'])
-#         bundle_product_names = [product_dict['name'] for product_dict in product_dicts]
-#         res = bundle_product_names
-#         if context and 'mode' in context and context['mode'] == 'all':
-#             res = [product_dict['id'] for product_dict in product_dicts]
-        return res
-            
+        
+    def _get_check_data(self,invoice_id,context=None):
+        pool = self.pool.get
+        self.cr.execute('select cl.id from glimsol_check_deposit_line cl inner join glimsol_check_deposit cd on (cd.id =cl.cd_id) inner join account_invoice inv on (inv.id = cd.invoice_id) where inv.id = %s' % invoice_id)
+        target_check_line_ids = [x[0] for x in self.cr.fetchall()]
+        return pool('glimsol.check.deposit.line').browse(self.cr,self.uid,target_check_line_ids)
+    
+    def _get_product_data(self,invoice_id,context=None):
+#     def _get_product_bundle_items(self,product_id,context=None):
+#         cr=self.cr
+#         uid = self.uid
+#         #fetch connected product item entries
+# 
+#         cr.execute('select id from product_item where product_id = %s' % product_id)
+#         product_item_ids = [x[0] for x in cr.fetchall()]
+#         res = self.pool.get('product.item').read(cr,uid,product_item_ids,['item_id','qty_uom','uom_id'])
+# #         bundle_product_item_ids = [x[0] for x in cr.fetchall()]
+# #         product_dicts=self.pool.get('product.product').read(cr,uid,bundle_product_item_ids,['name'])
+# #         bundle_product_names = [product_dict['name'] for product_dict in product_dicts]
+# #         res = bundle_product_names
+# #         if context and 'mode' in context and context['mode'] == 'all':
+# #             res = [product_dict['id'] for product_dict in product_dicts]
+#         return res
+        return True
 
     def _get_product_line_number(self,data,context=None):
         cr = self.cr
         #intigrate fetching of bundle items
-        for datum in data:
-            datum.bundle_items=self._get_product_bundle_items(datum.product_id.id)
-            print "datum.bundle_items".upper(),datum.bundle_items            
+#         for datum in data:
+           # datum.bundle_items=self._get_product_bundle_items(datum.product_id.id)
         res = [(x+1,obj) for x,obj in enumerate(data)]
         return res        
 

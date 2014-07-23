@@ -633,29 +633,30 @@
     </blockTable>
     <blockTable colWidths="108.0,108.0,108.0,108.0,108.0" style="Table14">
       <tr>
+       	<para style="P17">[[repeatIn(line_number(get_check_data(o.invoice_id.id)),'check_line')]]</para>
         <td>
-          <para style="Table Contents">
-            <font color="white"> </font>
+          <para style="P3">
+			[[ check_line[0] ]]
           </para>
         </td>
         <td>
-          <para style="Table Contents">
-            <font color="white"> </font>
+          <para style="P3">
+			[[ check_line[1].date ]]
           </para>
         </td>
         <td>
-          <para style="Table Contents">
-            <font color="white"> </font>
+          <para style="P3">
+                      [[ check_line[1].check_number ]]
           </para>
         </td>
         <td>
-          <para style="Table Contents">
-            <font color="white"> </font>
+          <para style="P3">
+                      [[ check_line[1].bank_id.name ]]
           </para>
         </td>
         <td>
-          <para style="Table Contents">
-            <font color="white"> </font>
+          <para style="P3">
+                      [[ "{:,.2f}".format(check_line[1].amount or 0.0) ]]
           </para>
         </td>
       </tr>
