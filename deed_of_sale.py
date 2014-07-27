@@ -176,7 +176,7 @@ class invoice(osv.osv):
         #check for existing check deposit entry
         target = self.pool.get('glimsol.conditional.deed.of.sale').search(cr,uid,[('invoice_id','=',inv.id)])
         res = {
-            'name':_("Check Deposit"),
+            'name':_("Conditional Deed of Sale"),
             'view_mode': 'form',
             'view_id': view_id,
             'view_type': 'form',
