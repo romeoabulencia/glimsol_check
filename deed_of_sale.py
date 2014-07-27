@@ -90,10 +90,10 @@ class cdos(osv.osv):
     
     _columns={
               'invoice_id':fields.many2one('account.invoice','Invoice',required=False),
-              'company_id':fields.many2one('res.company', 'Company', required=False), 
-              'company_user_id':fields.many2one('res.users','Company Owner',),
-              'customer_id':fields.many2one('res.users','Customer'),
-              'customer_user_id': fields.many2one('res.users','Customer Owner'),
+              'company_id':fields.many2one('res.partner', 'Company', domain=[('is_company','=',True)]), 
+              'company_user_id':fields.many2one('res.partner','Company Owner',domain=[('is_company','=',False)]),
+              'customer_id':fields.many2one('res.partner','Customer',domain=[('is_company','=',True)]),
+              'customer_user_id': fields.many2one('res.partner','Customer Owner',domain=[('is_company','=',False)]),
              'cdos_date': fields.date('Date'), 
              'down_payment': fields.function(_get_down_payment, method=True, type='float', string='Down Payment', store=False), 
              'balance':fields.function(_get_balance, method=True, type='float', string='Balance', store=False), 
