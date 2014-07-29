@@ -2,8 +2,7 @@
 
 <openerp>
     <data>
-<!--     <report auto="False" id="report_acknowledgement_receipt" model="glimsol.acknowledgement.receipt" name="glimsol.acknowledgement.receipt" 
-rml="glimsol_report/report/sale_order.rml" string="Acknowledgement Receipt"/> -->
+
 
            <record model="ir.ui.view" id="glimsol_acknowledgement_receipt_form_view">
                 <field name="name">glimsol.acknowledgement.receipt.form</field>

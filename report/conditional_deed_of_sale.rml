@@ -1,0 +1,835 @@
+<?xml version="1.0"?>
+<document filename="test.pdf">
+  <template pageSize="(612.0,1008.0)" title="Test" author="Martin Simon" allowSplitting="20">
+    <pageTemplate id="first">
+      <frame id="first" x1="72.0" y1="36.0" width="468" height="936"/>
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table2">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="1,0" stop="1,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="1,0" stop="1,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="2,0" stop="2,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="2,0" stop="2,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="3,0" stop="3,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="3,0" stop="3,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="3,0" stop="3,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="3,-1" stop="3,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="4,0" stop="4,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="4,-1" stop="4,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="5,0" stop="5,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="5,-1" stop="5,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="6,0" stop="6,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="6,0" stop="6,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="6,-1" stop="6,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="7,0" stop="7,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="7,-1" stop="7,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="8,0" stop="8,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="8,-1" stop="8,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="9,0" stop="9,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="9,0" stop="9,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="9,-1" stop="9,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="10,0" stop="10,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="10,-1" stop="10,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="11,0" stop="11,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="11,-1" stop="11,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="12,0" stop="12,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="12,0" stop="12,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="12,-1" stop="12,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="0,1" stop="0,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="0,1" stop="0,1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="1,1" stop="1,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="1,1" stop="1,1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="2,1" stop="2,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="2,1" stop="2,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="2,1" stop="2,1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="0,2" stop="0,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="1,2" stop="1,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="2,2" stop="2,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="2,2" stop="2,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="0,3" stop="0,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="1,3" stop="1,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="2,3" stop="2,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="2,3" stop="2,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="0,4" stop="0,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="1,4" stop="1,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="2,4" stop="2,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="2,4" stop="2,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table7">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="0,0" stop="0,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="0,0" stop="0,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="1,0" stop="1,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="1,0" stop="1,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="2,0" stop="2,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="2,0" stop="2,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="2,0" stop="2,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="0,1" stop="0,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="1,1" stop="1,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="2,1" stop="2,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="2,1" stop="2,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="0,2" stop="0,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="1,2" stop="1,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="2,2" stop="2,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="2,2" stop="2,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="0,3" stop="0,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="1,3" stop="1,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="2,3" stop="2,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="2,3" stop="2,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table1">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table5">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="0,0" stop="0,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="0,0" stop="0,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="1,0" stop="1,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="1,0" stop="1,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="2,0" stop="2,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="2,0" stop="2,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="3,0" stop="3,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="3,0" stop="3,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="3,-1" stop="3,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="4,0" stop="4,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="4,0" stop="4,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="4,0" stop="4,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="4,-1" stop="4,-1"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table6">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="0,0" stop="0,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="0,0" stop="0,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="1,0" stop="1,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="1,0" stop="1,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="2,0" stop="2,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="2,0" stop="2,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="3,0" stop="3,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="3,0" stop="3,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="3,-1" stop="3,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="4,0" stop="4,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="4,0" stop="4,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="4,-1" stop="4,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="5,0" stop="5,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="5,0" stop="5,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="5,0" stop="5,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="5,-1" stop="5,-1"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table3">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table4">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+    <paraStyle name="P1" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="CENTER"/>
+    <paraStyle name="P2" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P3" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P4" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P5" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P6" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P7" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P8" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P9" fontName="Helvetica" fontSize="11.0" leading="14" alignment="CENTER"/>
+    <paraStyle name="P10" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P11" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="CENTER"/>
+    <paraStyle name="P12" fontName="Helvetica" fontSize="12.0" leading="15" alignment="JUSTIFY"/>
+    <paraStyle name="P13" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" textColor="#ff0000"/>
+    <paraStyle name="P14" rightIndent="0.0" leftIndent="18.0" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P15" rightIndent="0.0" leftIndent="36.0" fontName="Helvetica" fontSize="12.0" leading="15" alignment="JUSTIFY"/>
+    <paraStyle name="P16" rightIndent="0.0" leftIndent="36.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P17" rightIndent="0.0" leftIndent="36.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P18" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="12.0" leading="15" alignment="JUSTIFY"/>
+    <paraStyle name="P19" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P20" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="12.0" leading="15" alignment="JUSTIFY"/>
+    <paraStyle name="P21" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="12.0" leading="15" alignment="JUSTIFY"/>
+    <paraStyle name="P22" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="12.0" leading="15" alignment="JUSTIFY"/>
+    <paraStyle name="P23" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P24" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P25" rightIndent="0.0" leftIndent="288.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P26" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P27" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P28" fontName="Helvetica" fontSize="12.0" leading="15" alignment="CENTER"/>
+    <paraStyle name="P29" fontName="Helvetica" fontSize="12.0" leading="15" alignment="RIGHT"/>
+    <paraStyle name="P30" fontName="Helvetica" fontSize="12.0" leading="15" alignment="JUSTIFY"/>
+    <paraStyle name="P31" fontName="Helvetica" fontSize="12.0" leading="15" alignment="JUSTIFY"/>
+    <paraStyle name="P32" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P33" fontName="Helvetica" fontSize="11.0" leading="14" alignment="RIGHT"/>
+    <paraStyle name="P34" fontName="Helvetica" fontSize="11.0" leading="14" alignment="CENTER"/>
+    <paraStyle name="P35" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P36" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="CENTER"/>
+    <paraStyle name="P37" fontName="Helvetica" fontSize="10.0" leading="13" alignment="RIGHT"/>
+    <paraStyle name="P38" fontName="Helvetica" fontSize="10.0" leading="13" alignment="CENTER"/>
+    <paraStyle name="P39" fontName="Helvetica-Bold" fontSize="10.0" leading="13" alignment="LEFT"/>
+    <paraStyle name="P40" fontName="Helvetica" fontSize="12.0" leading="15" alignment="CENTER"/>
+    <paraStyle name="P41" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="CENTER" textColor="#ff0000"/>
+    <paraStyle name="P42" fontName="Helvetica" fontSize="12.0" leading="15" alignment="LEFT"/>
+    <paraStyle name="P43" rightIndent="0.0" leftIndent="18.0" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="Standard" fontName="Helvetica" fontSize="12.0" leading="15" alignment="LEFT"/>
+    <paraStyle name="Heading" fontName="Helvetica" fontSize="14.0" leading="17" alignment="LEFT" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="Text body" fontName="Helvetica" fontSize="12.0" leading="15" alignment="LEFT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="List" fontName="Helvetica" fontSize="12.0" leading="15" alignment="LEFT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Caption" fontName="Helvetica-Oblique" fontSize="12.0" leading="15" alignment="LEFT" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="Index" fontName="Helvetica" fontSize="12.0" leading="15" alignment="LEFT"/>
+    <paraStyle name="Document Map" fontName="Helvetica" fontSize="10.0" leading="13" alignment="LEFT" backColor="#000080"/>
+    <paraStyle name="List Paragraph" rightIndent="0.0" leftIndent="36.0" fontName="Helvetica" fontSize="12.0" leading="15" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="Header" fontName="Helvetica" fontSize="12.0" leading="15" alignment="LEFT"/>
+    <paraStyle name="Footer" fontName="Helvetica" fontSize="12.0" leading="15" alignment="LEFT"/>
+    <paraStyle name="Balloon Text" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT"/>
+    <paraStyle name="Table Contents" fontName="Helvetica" fontSize="12.0" leading="15" alignment="LEFT"/>
+    <paraStyle name="Table Heading" fontName="Helvetica-Bold" fontSize="12.0" leading="15" alignment="CENTER"/>
+    <paraStyle name="terp_header" fontName="Helvetica-Bold" fontSize="15.0" leading="19" alignment="LEFT" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_default_8" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <images/>
+  </stylesheet>
+  <story>
+    <para style="P26">
+      <font color="white"> </font>
+    </para>
+    <para style="terp_default_8">
+      <font color="white"> </font>
+    </para>
+    <para style="terp_default_8">[[repeatIn(objects,'o')]]</para>
+    <para style="P27">[[ setLang(o.partner_id.lang) ]]</para>
+    <para style="P1">
+      <font color="white"> </font>
+    </para>
+    <para style="P1">CONDITIONAL DEED OF SALE</para>
+    <para style="P5">
+      <font color="white"> </font>
+    </para>
+    <para style="P5">
+      <font color="white"> </font>
+    </para>
+    <para style="P7">KNOW ALL MEN BY THESE PRESENTS:</para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font face="Helvetica" size="11.0">This </font>
+      <font face="Helvetica-Bold" size="11.0">Conditional Deed of Sale</font>
+      <font face="Helvetica" size="11.0"> made by and between</font>
+    </para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font face="Helvetica-Bold" size="11.0">COMPANY NAME</font>
+      <font face="Helvetica" size="11.0">, a corporation duly organized and existing under the laws of the Republic of the Philippines with its office address located at </font>
+      <font face="Helvetica-Bold" size="11.0">FULL COMPANY ADDRESS</font>
+      <font face="Helvetica" size="11.0">, duly represented by </font>
+      <font face="Helvetica" size="11.0">the</font>
+      <font face="Helvetica" size="11.0"> President </font>
+      <font face="Helvetica-Bold" size="11.0">COMPANY OWNER</font>
+      <font face="Helvetica" size="11.0">, hereafter referred to as the </font>
+      <font face="Helvetica-Bold" size="11.0">VENDOR</font>
+      <font face="Helvetica" size="11.0">;</font>
+    </para>
+    <para style="P5">
+      <font color="white"> </font>
+    </para>
+    <para style="P9">-and-</para>
+    <para style="P2">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font face="Helvetica-Bold" size="11.0">CUSTOMER NAME, </font>
+      <font face="Helvetica" size="11.0">with office and business address at</font>
+      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica-Bold" size="11.0">FULL CUSTOMER ADDRESS</font>
+      <font face="Helvetica" size="11.0">, </font>
+      <font face="Helvetica" size="11.0">herein duly represented in this act by the </font>
+      <font face="Helvetica" size="11.0">Owner </font>
+      <font face="Helvetica-Bold" size="11.0">CUSTOMER OWNER</font>
+      <font face="Helvetica-Bold" size="11.0">,</font>
+      <font face="Helvetica" size="11.0"> of legal age, Filipino citizen</font>
+      <font face="Helvetica" size="11.0">, hereafter</font>
+      <font face="Helvetica" size="11.0"> referred to as the </font>
+      <font face="Helvetica-Bold" size="11.0">VENDEE</font>
+      <font face="Helvetica" size="11.0">;</font>
+    </para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <para style="P9">WITNESSETH:</para>
+    <para style="P9">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="468.0" style="Table2">
+      <tr>
+        <td>
+          <para style="Standard">
+            <font face="Helvetica" size="11.0">That the </font>
+            <font face="Helvetica-Bold" size="11.0">VENDOR</font>
+            <font face="Helvetica" size="11.0"> is the owner of </font>
+            <font face="Helvetica" size="11.0">the following </font>
+            <font face="Helvetica-Bold" size="11.0">ONE (1) UNIT BRAND NEW SHANTUI CONCRETE PUMP MODEL </font>
+            <font face="Helvetica-Bold" size="11.0">HJC5270THB,</font>
+            <font face="Helvetica-Bold" size="11.0"/>
+            <font face="Helvetica" size="11.0">more</font>
+            <font face="Helvetica" size="11.0"> particularly described as follows:</font>
+          </para>
+          <para style="P40">
+            <font face="Helvetica" size="11.0"/>
+          </para>
+          <blockTable colWidths="172.0,17.0,145.0" style="Table7">
+            <tr>
+              <td>
+                <para style="P29">MODEL</para>
+              </td>
+              <td>
+                <para style="P28">:</para>
+              </td>
+              <td>
+                <para style="Table Contents">[[ product_line.name ]]</para>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <para style="P29">SERIAL NO.</para>
+              </td>
+              <td>
+                <para style="P28">:</para>
+              </td>
+              <td>
+                <para style="Table Contents">[[ product_line.serial ]]</para>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <para style="P29">ENGINE MODEL</para>
+              </td>
+              <td>
+                <para style="P28">:</para>
+              </td>
+              <td>
+                <para style="Table Contents">
+                  <font color="white"> </font>
+                </para>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <para style="P29">ENGINE SERIAL NO.</para>
+              </td>
+              <td>
+                <para style="P28">:</para>
+              </td>
+              <td>
+                <para style="Table Contents">
+                  <font color="white"> </font>
+                </para>
+              </td>
+            </tr>
+          </blockTable>
+          <para style="P40">
+            <font face="Helvetica" size="11.0"/>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P9">
+      <font color="white"> </font>
+    </para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <para style="Standard">
+      <font face="Helvetica" size="11.0">That the </font>
+      <font face="Helvetica-Bold" size="11.0">VENDOR</font>
+      <font face="Helvetica" size="11.0"> is the owner of </font>
+      <font face="Helvetica" size="11.0">the following </font>
+      <font face="Helvetica-Bold" size="11.0">ONE (1) UNIT BRAND NEW SHANTUI CONCRETE PUMP MODEL </font>
+      <font face="Helvetica-Bold" size="11.0">HJC5270THB,</font>
+      <font face="Helvetica-Bold" size="11.0"/>
+      <font face="Helvetica" size="11.0">more</font>
+      <font face="Helvetica" size="11.0"> particularly described as follows:</font>
+    </para>
+    <para style="P41">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="171.0,18.0,144.0" style="Table1">
+      <tr>
+        <td>
+          <para style="P37">MODEL</para>
+        </td>
+        <td>
+          <para style="P38">:</para>
+        </td>
+        <td>
+          <para style="P39">HJC5270THB</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P33">SERIAL NO.</para>
+        </td>
+        <td>
+          <para style="P38">:</para>
+        </td>
+        <td>
+          <para style="P39">JALV9F4Y6B7002052</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P33">ENGINE MODEL</para>
+        </td>
+        <td>
+          <para style="P32">:</para>
+        </td>
+        <td>
+          <para style="P39">ISUZU CYZ51Q</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P33">ENGINE SERIAL NO.</para>
+        </td>
+        <td>
+          <para style="P32">:</para>
+        </td>
+        <td>
+          <para style="P39">6WF1A437140</para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P42">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font face="Helvetica" size="11.0">That the </font>
+      <font face="Helvetica-Bold" size="11.0">VENDEE</font>
+      <font face="Helvetica" size="11.0"> is interested to buy the said unit</font>
+      <font face="Helvetica" size="11.0">s</font>
+      <font face="Helvetica" size="11.0">;</font>
+    </para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font face="Helvetica-Bold" size="11.0">NOW TH</font>
+      <font face="Helvetica-Bold" size="11.0">E</font>
+      <font face="Helvetica-Bold" size="11.0">REFORE</font>
+      <font face="Helvetica" size="11.0">, for and in consideration of sum of</font>
+      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica-Bold" size="11.0">[[ num2words(o.invoice_id.amount_total) ]]</font>
+      <font face="Helvetica-Bold" size="11.0"> [[ o.invoice_id.company_id.currency_id.symbol ]]</font>
+      <font face="Helvetica-Bold" size="11.0"> ONLY </font>
+      <font face="Helvetica-Bold" size="11.0"/>
+      <font face="Helvetica-Bold" size="11.0">(PHP </font>
+      <font face="Helvetica-Bold" size="11.0">[[ o.invoice_id.amount_total ]] </font>
+      <font face="Helvetica-Bold" size="11.0">)</font>
+      <font face="Helvetica" size="11.0">,</font>
+      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0">the </font>
+      <font face="Helvetica-Bold" size="11.0">VENDOR</font>
+      <font face="Helvetica" size="11.0"> hereby </font>
+      <font face="Helvetica-Bold" size="11.0">CONDITIONALLY SELLS, TRANSFERS and CONVEYS</font>
+      <font face="Helvetica" size="11.0"> the above described </font>
+      <font face="Helvetica" size="11.0">one</font>
+      <font face="Helvetica" size="11.0"> (</font>
+      <font face="Helvetica" size="11.0">1</font>
+      <font face="Helvetica" size="11.0">) unit unto the said VENDEE, under the following terms and conditions:</font>
+    </para>
+    <para style="P13">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font face="Helvetica" size="11.0">That the </font>
+      <font face="Helvetica-Bold" size="11.0">VENDEE</font>
+      <font face="Helvetica" size="11.0"> agrees to pay the full amount of </font>
+      <font face="Helvetica-Bold" size="11.0">[[ o.invoice_id.company_id.currency_id.symbol ]]</font>
+      <font face="Helvetica-Bold" size="11.0"> [[ o.invoice_id.amount ]]</font>
+      <font face="Helvetica-Bold" size="11.0"/>
+      <font face="Helvetica" size="11.0">with breakdown as follows</font>
+      <font face="Helvetica-Bold" size="11.0">:</font>
+    </para>
+    <para style="P2">
+      <font color="white"> </font>
+    </para>
+    <para style="P31" leftIndent="15" bulletIndent="0">
+      <bullet size="12.0">
+        <seq id="WW8Num1"/>
+      </bullet>
+      <font face="Helvetica" size="11.0">Down payment of </font>
+      <font face="Helvetica-Bold" size="11.0">[[ num2words(o.down_payment) ]]</font>
+      <font face="Helvetica-Bold" size="11.0"/>
+      <font face="Helvetica-Bold" size="11.0">[[ o.invoice_id.company_id.currency_id.symbol ]]</font>
+      <font face="Helvetica-Bold" size="11.0"> ONLY (PHP </font>
+      <font face="Helvetica-Bold" size="11.0">[[ o.down_payment ]]</font>
+      <font face="Helvetica-Bold" size="11.0">).</font>
+    </para>
+    <para style="P14">
+      <font color="white"> </font>
+    </para>
+    <para style="P31" leftIndent="15" bulletIndent="0">
+      <bullet size="12.0">
+        <seq id="WW8Num1"/>
+      </bullet>
+      <font face="Helvetica" size="11.0">Full payment of </font>
+      <font face="Helvetica-Bold" size="11.0">[[ num2words(o.invoice_id.residual ]] [[ o.invoice_id.company_id.currency_id.symbol ]]</font>
+      <font face="Helvetica-Bold" size="11.0"> ONLY (</font>
+      <font face="Helvetica-Bold" size="11.0">[[ o.invoice_id.company_id.currency_id.symbol ]]</font>
+      <font face="Helvetica-Bold" size="11.0"> 9</font>
+      <font face="Helvetica-Bold" size="11.0">00,000.00</font>
+      <font face="Helvetica-Bold" size="11.0">), </font>
+      <font face="Helvetica" size="11.0">payable with twelve (</font>
+      <font face="Helvetica-Bold" size="11.0">12</font>
+      <font face="Helvetica" size="11.0">) equal Post Dated Checks </font>
+      <font face="Helvetica-Bold" size="11.0">(PDC’s) </font>
+      <font face="Helvetica" size="11.0">per</font>
+      <font face="Helvetica" size="11.0"> month </font>
+      <font face="Helvetica" size="11.0">a</font>
+      <font face="Helvetica" size="11.0">s </font>
+      <font face="Helvetica" size="11.0">stated in</font>
+      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0">the detailed payment scheme below</font>
+      <font face="Helvetica" size="11.0">.</font>
+    </para>
+    <para style="P12">
+      <font face="Helvetica" size="11.0"/>
+    </para>
+    <blockTable colWidths="37.0,95.0,70.0,141.0,124.0" style="Table5">
+      <tr>
+        <td>
+          <para style="P28">ITEM</para>
+        </td>
+        <td>
+          <para style="P28">DATE</para>
+        </td>
+        <td>
+          <para style="P28">CHECK NO.</para>
+        </td>
+        <td>
+          <para style="P28">BANK</para>
+        </td>
+        <td>
+          <para style="P28">AMOUNT</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="37.0,95.0,70.0,141.0,77.0,47.0" style="Table6">
+      <tr>
+        <td>
+          <para style="Table Contents">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="Table Contents">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="Table Contents">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="Table Contents">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="Table Contents">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="Table Contents">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P12">
+      <font face="Helvetica" size="11.0"/>
+    </para>
+    <para style="P14">
+      <font color="white"> </font>
+    </para>
+    <para style="P15">
+      <font face="Helvetica" size="11.0">That in the event the check payments of the </font>
+      <font face="Helvetica-Bold" size="11.0">VENDEE</font>
+      <font face="Helvetica" size="11.0"> are dishonored by the bank on their</font>
+    </para>
+    <para style="P16">respective due dates, the entire obligation and/or balance thereof becomes immediately due</para>
+    <para style="P16">and demandable.</para>
+    <para style="P17">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font face="Helvetica" size="11.0">Further, when the</font>
+      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica-Bold" size="11.0">VENDEE</font>
+      <font face="Helvetica" size="11.0"> failed to settled the bounce check within 1</font>
+      <font face="Helvetica" size="11.0">5</font>
+      <font face="Helvetica" size="11.0"> days, the </font>
+      <font face="Helvetica-Bold" size="11.0">VENDOR</font>
+      <font face="Helvetica" size="11.0"> has</font>
+    </para>
+    <para style="P16">the right to pull out the unit and re-sell to other customer(s).</para>
+    <para style="P17">
+      <font color="white"> </font>
+    </para>
+    <para style="P15">
+      <font face="Helvetica" size="11.0">The </font>
+      <font face="Helvetica-Bold" size="11.0">VENDEE</font>
+      <font face="Helvetica" size="11.0"> to the above-describe property, including the improvements thereon, shall ipso</font>
+    </para>
+    <para style="P15">
+      <font face="Helvetica" size="11.0">facto cease and terminate, and all payments made by him/her to said default shall be</font>
+      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0">deemed </font>
+    </para>
+    <para style="P16">forfeited and waived damages without prejudice.</para>
+    <para style="P5">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font face="Helvetica" size="11.0">That in case of litigation the case shall only be filed at </font>
+      <font face="Helvetica" size="11.0">Pasig</font>
+      <font face="Helvetica" size="11.0"> City Courts and the VENDEE shall pay attorney’s fee </font>
+      <font face="Helvetica" size="11.0">plus </font>
+      <font face="Helvetica" size="11.0">25 % Interest per annum and penalty of 24 % per annum, all based on the remaining balance.</font>
+    </para>
+    <para style="P19">
+      <font color="white"> </font>
+    </para>
+    <para style="P18">
+      <font face="Helvetica-Bold" size="11.0">I</font>
+      <font face="Helvetica-Bold" size="11.0">N WITNESS WHEREOF</font>
+      <font face="Helvetica" size="11.0">, we have hereunto set our hands this [[ ordinal(o.cdos_date.split('-')[2]) ]] day of [[ get_cdos_month(o) ]], </font>
+      <font face="Helvetica" size="11.0">[[ ordinal(o.cdos_date.split('-')[0]) ]]</font>
+      <font face="Helvetica" size="11.0">, at </font>
+      <font face="Helvetica" size="11.0">Pasig </font>
+      <font face="Helvetica" size="11.0">City, Philippines.</font>
+    </para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="245.0,240.0" style="Table3">
+      <tr>
+        <td>
+          <para style="P3">COMPANY NAME</para>
+        </td>
+        <td>
+          <para style="P3">CUSTOMER NAME</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P3">[[ o.company_id.name ]]</para>
+          <para style="P2">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P3">[[ o.costumer_id.name ]]</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P10">COMPANY OWNER</para>
+        </td>
+        <td>
+          <para style="P10">CUSTOMER OWNER</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P8">[[ o.company_user_id.name ]]</para>
+        </td>
+        <td>
+          <para style="P32">[[ o.costumer_user_id.name ]]</para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P21">
+      <font color="white"> </font>
+    </para>
+    <para style="P23">
+      <font color="white"> </font>
+    </para>
+    <para style="P24">SIGNED IN THE PRESENCE OF:</para>
+    <para style="P24">
+      <font color="white"> </font>
+    </para>
+    <para style="P22">
+      <font face="Helvetica" size="11.0">__________________________</font>
+      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0">and_____________________</font>
+    </para>
+    <para style="P5">
+      <font color="white"> </font>
+    </para>
+    <para style="P7">REPUBLIC OF THE PHILIPPINES)</para>
+    <para style="P12">
+      <font face="Helvetica" size="11.0">PASIG</font>
+      <font face="Helvetica" size="11.0"> CITY)S.S</font>
+    </para>
+    <para style="P7">x---------------------------------------------------x</para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <para style="P11">ACKNOWLEDGMENT</para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <para style="P20">
+      <font face="Helvetica-Bold" size="11.0">BEFORE ME</font>
+      <font face="Helvetica" size="11.0">, this ______ day of ____________, 20</font>
+      <font face="Helvetica" size="11.0">14</font>
+      <font face="Helvetica" size="11.0">, a Notary public for and in </font>
+      <font face="Helvetica" size="11.0">Pasig</font>
+      <font face="Helvetica" size="11.0"> City, Philippines, personally appeared to me with their official Identification No., to wit:</font>
+    </para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="239.0,239.0" style="Table4">
+      <tr>
+        <td>
+          <para style="P10">COMPANY OWNER</para>
+        </td>
+        <td>
+          <para style="P10">CUSTOMER OWNER</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P4">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P6">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P4">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P3">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P7">Known to me to be the same person who executed the foregoing instrument and acknowledged to me the same is their free and voluntary act of deed.</para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <para style="P7">
+      <font color="white"> .........</font>
+    </para>
+    <para style="P12">
+      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica-Bold" size="11.0">WITNESS MY HAND AND SEAL</font>
+      <font face="Helvetica" size="11.0">, same date and place above-stated.</font>
+    </para>
+    <para style="P5">
+      <font color="white"> </font>
+    </para>
+    <para style="P5">
+      <font color="white"> </font>
+    </para>
+    <para style="P7">
+      <font color="white"> .........</font>
+      <font color="white"> .........</font>
+      <font color="white"> .........</font>
+      <font color="white"> .........</font>
+      <font color="white"> .........</font>
+      <font color="white"> .........</font>
+    </para>
+    <para style="P25">NOTARY PUBLIC</para>
+    <para style="P25">
+      <font color="white"> </font>
+    </para>
+    <para style="P25">
+      <font color="white"> </font>
+    </para>
+    <para style="P25">
+      <font color="white"> </font>
+    </para>
+    <para style="P7">Doc No.<font color="white"> .........</font>,________;</para>
+    <para style="P7">Page No. <font color="white"> .........</font>,________;</para>
+    <para style="P7">Book No.<font color="white"> .........</font>,________;</para>
+    <para style="P12">
+      <font face="Helvetica" size="11.0">Series 20</font>
+      <font face="Helvetica" size="11.0">14</font>
+    </para>
+    <para>
+      <seqReset id="WW8Num1"/>
+    </para>
+    <para>
+      <seqReset id="WW8Num1"/>
+    </para>
+  </story>
+</document>
+
