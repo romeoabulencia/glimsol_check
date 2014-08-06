@@ -2,7 +2,8 @@
 
 <openerp>
     <data>
-
+<!--     <report auto="False" id="report_acknowledgement_receipt" model="glimsol.acknowledgement.receipt" name="glimsol.acknowledgement.receipt" 
+rml="glimsol_report/report/sale_order.rml" string="Acknowledgement Receipt"/> -->
 
            <record model="ir.ui.view" id="glimsol_acknowledgement_receipt_form_view">
                 <field name="name">glimsol.acknowledgement.receipt.form</field>
@@ -16,13 +17,20 @@
 							<field name='total_cash_amount'/>
 							<field name='total_check_amount'/>
 							<field name='total_check_number'/>
-							<field name='journal_id'/>
+							<field name="trade_in"/>
+							<field name="trade_in_ref"/>
+							<!-- <field name='journal_id'/> -->
 						</group>
 						<group>
 							<field name='payment_description'/>
 							<field name='date'/>
 							<field name='cdos_reference'/>
 							<field name='invoice_id'/>
+							<field name='quote_ref'/>
+							<field name='po_ref'/>
+							<field name='dr_ref'/>
+							<field name='sales_puser_id'/>
+							
 							<field name='recieve_user_id'/>
 						</group>	
 					</group>

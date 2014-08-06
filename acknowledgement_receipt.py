@@ -76,15 +76,22 @@ class glimsol_acknowledgment_receipt(osv.osv):
               'total_cash_amount':fields.function(_get_total_cash_amount, method=True, type="float", string='Total Cash Amount', store=False), 
               'total_check_amount':fields.function(_get_check_amount, method=True, type='float', string='Total Check Amount', store=False),
               'total_check_number':fields.function(_get_check_number, method=True, type='float', string='Total Check Number', store=False),
-              'journal_id':fields.many2one('account.journal', 'Payment Method', required=True ,domain=[('type','in',['bank','cash'])]),
+              'journal_id':fields.many2one('account.journal', 'Payment Method', required=False ,domain=[('type','in',['bank','cash'])]),
               'total_amount_in_words': fields.function(_get_amount_in_words, method=True, type='char', string='Total Amount in Words', store=False),
               'payment_description':fields.char('Payment Description',size=64),
               'notes':fields.text('Notes/Remarks'),
               
-              'date': fields.date('Check Date',required=True),
+              'date': fields.date('Date',required=True),
               'cdos_reference':fields.char('CDOS Reference',size=64,required=True),
               'invoice_id':fields.many2one('account.invoice','Invoice Reference',required=True),
-              'recieve_user_id':fields.many2one('res.partner','Received By',required=True),
+              'recieve_user_id':fields.many2one('res.partner','Received By',required=True,domain=[('employee','=',True)]),
+              'trade_in':fields.char('Total trade-in amount', size=64, required=False, readonly=False),
+              'trade_in_ref':fields.char('Trade in reference',size=64,required=False,redonly=False),
+              'quote_ref':fields.char('Quotation Reference',size=64,required=False,readonly=False),
+              'po_ref':fields.char('PO Reference',size=64,required=False,readonly=False),
+              'dr_ref':fields.char('DR Reference',size=64,required=False,readonly=False),
+              'sales_puser_id':fields.many2one('res.partner','Sales Person',domain=[('employee','=',True)])
+
               }
     _defaults = {  
         'name': lambda obj, cr, uid, context: obj.pool.get('ir.sequence').get(cr, uid, 'glimsol.acknowledgement.receipt'),
