@@ -58,7 +58,7 @@
 	                    </group>
 	                    <newline/>
 	                    <group>
-                        	<field name="line_ids" nolabel="1">
+                        	<field name="line_ids" nolabel="1" on_change="onchange_line_ids(line_ids)">
                         		<tree string="Checks" editable="bottom">
 			                    	<field name="bank_id"/>
 			                    	<field name="check_number"/>
@@ -75,6 +75,8 @@
                             <group colspan="2" name="cheque_total">
                             	<field name="cheque_number"/>
                             	<field name="cheque_amount"/>
+                            	<field name="cleared_checks"/>
+                            	<field name="return_checks"/>
                             </group>
                     <footer>
                         <button name="check_deposit_save" string="Save" class="oe_highlight" type="object"/> or
