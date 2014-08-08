@@ -94,8 +94,6 @@ class glimsol_check_deposit(osv.osv):
         return res
     
     def onchange_line_ids(self,cr,uid,ids,line_ids,context=None):
-        print "onchange_line_ids".upper()
-        print "line_ids".upper(),line_ids
         res={'value':{
                       'cheque_number':len(line_ids),
                       'cheque_amount':self._get_check_amount(cr, uid, ids, '','',{'line_ids':line_ids})[ids[0]],
@@ -106,7 +104,6 @@ class glimsol_check_deposit(osv.osv):
         #cheque_amount _get_check_amount
         #cleared_checks _get_cleared_checks
         #return_checks _get_return_checks
-        print "res".upper(),res
         return res
     
     
@@ -126,14 +123,22 @@ class glimsol_check_deposit(osv.osv):
 
 class glimsol_check_deposit_line(osv.osv):
     _name="glimsol.check.deposit.line"
-    
+    def unlink(self, cr, uid, ids, context=None):
+        if context is None:
+            context = {}
+        ctx = context.copy()
+        for deposit_line in self.browse(cr, uid, ids, context=context):
+            if deposit_line.state == 'paid':
+                raise osv.except_osv(_('User Error!'), _('You cannot delete paid checks.'))
+        return super(glimsol_check_deposit_line, self).unlink(
+            cr, uid, ids, context=ctx)
     _columns={
               'cd_id':fields.many2one('glimsol.check.deposit','Check Deposit',required=False),
               'bank_id':fields.many2one('res.bank', 'Bank', required=True), 
               'check_number':fields.char('Check Number', size=64, required=True),
               'date': fields.date('Check Date'),
               'amount': fields.float('Amount', digits=(16, 2)),
-              'journal_id':fields.many2one('account.journal', 'Payment Method', required=True ,domain=[('type','in',['bank','cash'])]),
+              'journal_id':fields.many2one('account.journal', 'Payment Method', required=True ,domain=[('type','in',['bank'])]),
               'period_id':fields.many2one('account.period', 'Period', required=True),  
               'state':fields.selection([
                   ('pending','Pending'),
@@ -149,6 +154,8 @@ class glimsol_check_deposit_line(osv.osv):
 class invoice(osv.osv):
     _inherit = 'account.invoice'
     _name="account.invoice"
+
+
     
     _columns={
               'check_deposit_ids':fields.one2many('glimsol.check.deposit', 'invoice_id', 'Check Deposit', required=False),
