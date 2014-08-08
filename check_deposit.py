@@ -42,8 +42,15 @@ class glimsol_check_deposit(osv.osv):
         for obj in self.browse(cr, user, ids, context=context):
             res[obj.id]=sum([x.amount for x in obj.line_ids])
             if context and 'line_ids' in context:
-                for x in context['line_ids']: print x
-                res[obj.id]=sum([x[2]['amount'] for x in context['line_ids']])
+                list_sum = []
+                for x in context['line_ids']:
+                    if x[0] == 4:
+                        temp=self.pool.get('glimsol.check.deposit.line').read(cr,user,x[1],['amount'])
+                        list_sum.append(temp['amount'])
+                    else:
+                        list_sum.append(x[2]['amount'])
+                res[obj.id]=sum(list_sum)
+#                 res[obj.id]=sum([x[2]['amount'] for x in context['line_ids'] if x[2]])
         return res        
     
     def _get_cleared_checks(self,cr,user,ids,name,attr,context=None):
@@ -57,7 +64,10 @@ class glimsol_check_deposit(osv.osv):
             res[obj.id]=sum(amount_list)
             if context and 'line_ids' in context:
                 for x in context['line_ids']:
-                    if x[2]['state'] == 'paid':
+                    if x[0] == 4:
+                        temp=self.pool.get('glimsol.check.deposit.line').read(cr,user,x[1],['amount','state'])
+                        x[2]=temp                    
+                    if x[2] and x[2]['state'] == 'paid':
                         amount_list.append(x[2]['amount'])
                 res[obj.id]=sum(amount_list)            
         return res
@@ -74,7 +84,10 @@ class glimsol_check_deposit(osv.osv):
             res[obj.id]=sum(amount_list)
             if context and 'line_ids' in context:
                 for x in context['line_ids']:
-                    if x[2]['state'] == 'returned':
+                    if x[0] == 4:
+                        temp=self.pool.get('glimsol.check.deposit.line').read(cr,user,x[1],['amount','state'])
+                        x[2]=temp                    
+                    if x[2] and  x[2]['state'] == 'returned':
                         amount_list.append(x[2]['amount'])
                 res[obj.id]=sum(amount_list)                
             
