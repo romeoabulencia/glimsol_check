@@ -19,18 +19,15 @@
 #
 ##############################################################################
 
+from openerp.osv import fields, osv
 
-{
-    'name': 'GLIMSOL check deposit',
-    'version': '1.0',
-    'category': '',
-    'description': """Glimsol Check Deposit""",
-    'author': 'GLIMSOL',
-    'depends': ['sale','purchase'],
-    'data': ['check_deposit_view.xml','acknowledgement_receipt_view.xml','glimsol_check_data.xml','deed_of_sale_view.xml','stock_view.xml'],
-    'demo': [],
-    'test': [],
-    'installable': True,
-    'auto_install': False,
-}
-# vim:expandtab:smartindent:tabstop=4:softtiabstop=4:shiftwidth=4:
+
+class stock_picking_out(osv.osv):
+    _inherit = 'stock.picking'
+    _name='stock.picking'
+    _columns={
+             "po_id":fields.many2one('purchase.order','PO Reference',required=False),
+             "ar_id":fields.many2one('glimsol.acknowledgement.receipt','AR Reference',required=False),
+#             'po_reference':fields.char('PO Reference',size=64,required=False),
+#             'ar_reference':fields.char('AR Reference',size=64,required=False),} 
+    }

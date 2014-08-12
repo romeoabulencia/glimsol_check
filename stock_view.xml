@@ -1,0 +1,22 @@
+<openerp>
+    <data>
+    
+    		 <record model="ir.ui.view" id="inherit_view_picking_form_view_inherit_form_view">
+                <field name="name">stock.picking.out.form</field>
+                <field name="model">stock.picking.out</field>
+                <field name="type">form</field>
+                <field name="inherit_id" ref="qishu.inherit_view_picking_form_view"/>
+                <field name="arch" type="xml">
+<!-- 					<field name="approve_user_id" position="after">
+						<field name="po_id"/>
+					</field> -->
+					
+					<field name="recommend_user_id" position="before">
+						<field name="ar_id"/>
+						<field name="po_id"/>
+					</field>
+                </field>
+            </record>
+    
+    </data>
+</openerp>
