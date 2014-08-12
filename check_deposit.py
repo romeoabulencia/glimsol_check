@@ -44,11 +44,13 @@ class glimsol_check_deposit(osv.osv):
             if context and 'line_ids' in context:
                 list_sum = []
                 for x in context['line_ids']:
+                    print "x".upper(), x
                     if x[0] == 4:
                         temp=self.pool.get('glimsol.check.deposit.line').read(cr,user,x[1],['amount'])
                         list_sum.append(temp['amount'])
-                    else:
-                        list_sum.append(x[2]['amount'])
+                    elif x[2]:
+                        if 'amount' in x[2]:
+                            list_sum.append(x[2]['amount'])
                 res[obj.id]=sum(list_sum)
 #                 res[obj.id]=sum([x[2]['amount'] for x in context['line_ids'] if x[2]])
         return res        
@@ -100,10 +102,6 @@ class glimsol_check_deposit(osv.osv):
                       'cleared_checks':self._get_cleared_checks(cr, uid, ids, '','',{'line_ids':line_ids})[ids[0]],
                       'return_checks':self._get_return_checks(cr, uid, ids, '','',{'line_ids':line_ids})[ids[0]]
                       }}
-        #cheque_number _get_check_number
-        #cheque_amount _get_check_amount
-        #cleared_checks _get_cleared_checks
-        #return_checks _get_return_checks
         return res
     
     
@@ -123,6 +121,20 @@ class glimsol_check_deposit(osv.osv):
 
 class glimsol_check_deposit_line(osv.osv):
     _name="glimsol.check.deposit.line"
+
+    def write(self, cr, uid, ids, vals, context=None):
+        result = super(glimsol_check_deposit_line, self).write(cr, uid, ids, vals, context=context)
+        if not isinstance(ids,list):
+            ids = [ids]
+            
+            
+        return result    
+    
+    def create(self, cr, uid, vals, context=None):
+        result = super(glimsol_check_deposit_line, self).create(cr, uid, vals, context) 
+        
+        return result
+    
     def unlink(self, cr, uid, ids, context=None):
         if context is None:
             context = {}
@@ -132,6 +144,7 @@ class glimsol_check_deposit_line(osv.osv):
                 raise osv.except_osv(_('User Error!'), _('You cannot delete paid checks.'))
         return super(glimsol_check_deposit_line, self).unlink(
             cr, uid, ids, context=ctx)
+        
     _columns={
               'cd_id':fields.many2one('glimsol.check.deposit','Check Deposit',required=False),
               'bank_id':fields.many2one('res.bank', 'Bank', required=True), 

@@ -7,13 +7,13 @@
                 <field name="type">form</field>
                 <field name="arch" type="xml">
                     <form string="Check Deposits">
-                    	<field name="bank_id"/>
-                    	<field name="check_number"/>
-                    	<field name="date"/>
-                    	<field name="amount"/>
-                    	<field name="journal_id"/>
-                    	<field name="period_id"/>
-                    	<field name="state"/>
+                    	<field name="bank_id" attrs="{'readonly':[('state','=','paid')]}" />
+                    	<field name="check_number"  attrs="{'readonly':[('state','=','paid')]}"/>
+                    	<field name="date" attrs="{'readonly':[('state','=','paid')]}"/>
+                    	<field name="amount" attrs="{'readonly':[('state','=','paid')]}"/>
+                    	<field name="journal_id" attrs="{'readonly':[('state','=','paid')]}"/>
+                    	<field name="period_id" attrs="{'readonly':[('state','=','paid')]}"/>
+                    	<field name="state" attrs="{'readonly':[('state','=','paid')]}"/>
                 
                     </form>
                 </field>
@@ -25,13 +25,13 @@
                 <field name="type">tree</field>
                 <field name="arch" type="xml">
                     <tree string="Check Deposits">
-                    	<field name="bank_id"/>
-                    	<field name="check_number"/>
-                    	<field name="date"/>
-                    	<field name="amount"/>
-                    	<field name="journal_id"/>
-                    	<field name="period_id"/>
-                    	<field name="state"/>
+                    	<field name="bank_id" attrs="{'readonly':[('state','=','paid')]}" />
+                    	<field name="check_number"  attrs="{'readonly':[('state','=','paid')]}"/>
+                    	<field name="date" attrs="{'readonly':[('state','=','paid')]}"/>
+                    	<field name="amount" attrs="{'readonly':[('state','=','paid')]}"/>
+                    	<field name="journal_id" attrs="{'readonly':[('state','=','paid')]}"/>
+                    	<field name="period_id" attrs="{'readonly':[('state','=','paid')]}"/>
+                    	<field name="state" attrs="{'readonly':[('state','=','paid')]}"/>
                 
                     </tree>
                 </field>
@@ -60,13 +60,13 @@
 	                    <group>
                         	<field name="line_ids" nolabel="1" on_change="onchange_line_ids(line_ids)">
                         		<tree string="Checks" editable="bottom">
-			                    	<field name="bank_id"/>
-			                    	<field name="check_number"/>
-			                    	<field name="date"/>
-			                    	<field name="amount"/>
-			                    	<field name="journal_id"/>
-			                    	<field name="period_id"/>
-			                    	<field name="state"/>                        		
+			                    	<field name="bank_id" attrs="{'readonly':[('state','=','paid')]}"/>
+			                    	<field name="check_number" attrs="{'readonly':[('state','=','paid')]}"/>
+			                    	<field name="date" attrs="{'readonly':[('state','=','paid')]}"/>
+			                    	<field name="amount" attrs="{'readonly':[('state','=','paid')]}"/>
+			                    	<field name="journal_id" attrs="{'readonly':[('state','=','paid')]}"/>
+			                    	<field name="period_id" attrs="{'readonly':[('state','=','paid')]}"/>
+			                    	<field name="state" attrs="{'readonly':[('state','=','paid')]}"/>                        		
                         		</tree>
                         	</field>
                         	

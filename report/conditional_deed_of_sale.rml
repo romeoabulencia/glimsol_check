@@ -237,7 +237,7 @@
       <font color="white"> </font>
     </para>
     <para style="terp_default_8">[[repeatIn(objects,'o')]]</para>
-    <para style="P27">[[ setLang(o.partner_id.lang) ]]</para>
+    <para style="P27">[[ setLang(o.invoice_id.partner_id.lang) ]]</para>
     <para style="P1">
       <font color="white"> </font>
     </para>
@@ -282,7 +282,7 @@
     <para style="P12">
       <font face="Helvetica-Bold" size="11.0">CUSTOMER NAME, </font>
       <font face="Helvetica" size="11.0">with office and business address at</font>
-      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0"> </font>
       <font face="Helvetica-Bold" size="11.0">FULL CUSTOMER ADDRESS</font>
       <font face="Helvetica" size="11.0">, </font>
       <font face="Helvetica" size="11.0">herein duly represented in this act by the </font>
@@ -312,12 +312,12 @@
             <font face="Helvetica" size="11.0">the following </font>
             <font face="Helvetica-Bold" size="11.0">ONE (1) UNIT BRAND NEW SHANTUI CONCRETE PUMP MODEL </font>
             <font face="Helvetica-Bold" size="11.0">HJC5270THB,</font>
-            <font face="Helvetica-Bold" size="11.0"/>
+            <font face="Helvetica-Bold" size="11.0"> </font>
             <font face="Helvetica" size="11.0">more</font>
             <font face="Helvetica" size="11.0"> particularly described as follows:</font>
           </para>
           <para style="P40">
-            <font face="Helvetica" size="11.0"/>
+            <font face="Helvetica" size="11.0"> </font>
           </para>
           <blockTable colWidths="172.0,17.0,145.0" style="Table7">
             <tr>
@@ -370,7 +370,7 @@
             </tr>
           </blockTable>
           <para style="P40">
-            <font face="Helvetica" size="11.0"/>
+            <font face="Helvetica" size="11.0"> </font>     
           </para>
         </td>
       </tr>
@@ -388,7 +388,7 @@
       <font face="Helvetica" size="11.0">the following </font>
       <font face="Helvetica-Bold" size="11.0">ONE (1) UNIT BRAND NEW SHANTUI CONCRETE PUMP MODEL </font>
       <font face="Helvetica-Bold" size="11.0">HJC5270THB,</font>
-      <font face="Helvetica-Bold" size="11.0"/>
+      <font face="Helvetica-Bold" size="11.0"> </font>
       <font face="Helvetica" size="11.0">more</font>
       <font face="Helvetica" size="11.0"> particularly described as follows:</font>
     </para>
@@ -459,16 +459,16 @@
       <font face="Helvetica-Bold" size="11.0">E</font>
       <font face="Helvetica-Bold" size="11.0">REFORE</font>
       <font face="Helvetica" size="11.0">, for and in consideration of sum of</font>
-      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0"> </font>
       <font face="Helvetica-Bold" size="11.0">[[ num2words(o.invoice_id.amount_total) ]]</font>
       <font face="Helvetica-Bold" size="11.0"> [[ o.invoice_id.company_id.currency_id.symbol ]]</font>
       <font face="Helvetica-Bold" size="11.0"> ONLY </font>
-      <font face="Helvetica-Bold" size="11.0"/>
+      <font face="Helvetica-Bold" size="11.0"> </font>
       <font face="Helvetica-Bold" size="11.0">(PHP </font>
       <font face="Helvetica-Bold" size="11.0">[[ o.invoice_id.amount_total ]] </font>
       <font face="Helvetica-Bold" size="11.0">)</font>
       <font face="Helvetica" size="11.0">,</font>
-      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0"> </font>
       <font face="Helvetica" size="11.0">the </font>
       <font face="Helvetica-Bold" size="11.0">VENDOR</font>
       <font face="Helvetica" size="11.0"> hereby </font>
@@ -488,7 +488,7 @@
       <font face="Helvetica" size="11.0"> agrees to pay the full amount of </font>
       <font face="Helvetica-Bold" size="11.0">[[ o.invoice_id.company_id.currency_id.symbol ]]</font>
       <font face="Helvetica-Bold" size="11.0"> [[ o.invoice_id.amount ]]</font>
-      <font face="Helvetica-Bold" size="11.0"/>
+      <font face="Helvetica-Bold" size="11.0"> </font>
       <font face="Helvetica" size="11.0">with breakdown as follows</font>
       <font face="Helvetica-Bold" size="11.0">:</font>
     </para>
@@ -496,12 +496,13 @@
       <font color="white"> </font>
     </para>
     <para style="P31" leftIndent="15" bulletIndent="0">
-      <bullet size="12.0">
-        <seq id="WW8Num1"/>
+<!--      <bullet size="12.0">
+        <seq id="WW8Num1"> </seq>
       </bullet>
+ -->
       <font face="Helvetica" size="11.0">Down payment of </font>
       <font face="Helvetica-Bold" size="11.0">[[ num2words(o.down_payment) ]]</font>
-      <font face="Helvetica-Bold" size="11.0"/>
+      <font face="Helvetica-Bold" size="11.0"> </font>
       <font face="Helvetica-Bold" size="11.0">[[ o.invoice_id.company_id.currency_id.symbol ]]</font>
       <font face="Helvetica-Bold" size="11.0"> ONLY (PHP </font>
       <font face="Helvetica-Bold" size="11.0">[[ o.down_payment ]]</font>
@@ -511,9 +512,10 @@
       <font color="white"> </font>
     </para>
     <para style="P31" leftIndent="15" bulletIndent="0">
-      <bullet size="12.0">
+<!--      <bullet size="12.0">
         <seq id="WW8Num1"/>
       </bullet>
+-->      
       <font face="Helvetica" size="11.0">Full payment of </font>
       <font face="Helvetica-Bold" size="11.0">[[ num2words(o.invoice_id.residual ]] [[ o.invoice_id.company_id.currency_id.symbol ]]</font>
       <font face="Helvetica-Bold" size="11.0"> ONLY (</font>
@@ -530,7 +532,7 @@
       <font face="Helvetica" size="11.0">a</font>
       <font face="Helvetica" size="11.0">s </font>
       <font face="Helvetica" size="11.0">stated in</font>
-      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0"> </font>
       <font face="Helvetica" size="11.0">the detailed payment scheme below</font>
       <font face="Helvetica" size="11.0">.</font>
     </para>
