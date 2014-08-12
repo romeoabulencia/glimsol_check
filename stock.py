@@ -23,6 +23,16 @@ from openerp.osv import fields, osv
 
 
 class stock_picking_out(osv.osv):
+    _inherit = 'stock.picking.out'
+    _name='stock.picking.out'
+    _columns={
+             "po_id":fields.many2one('purchase.order','PO Reference',required=False),
+             "ar_id":fields.many2one('glimsol.acknowledgement.receipt','AR Reference',required=False),
+#             'po_reference':fields.char('PO Reference',size=64,required=False),
+#             'ar_reference':fields.char('AR Reference',size=64,required=False),} 
+    }
+
+class stock_picking(osv.osv):
     _inherit = 'stock.picking'
     _name='stock.picking'
     _columns={
