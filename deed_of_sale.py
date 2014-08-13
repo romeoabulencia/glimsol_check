@@ -34,7 +34,7 @@ class cdos(osv.osv):
         res = {
 
             'type': 'ir.actions.report.xml',
-            'report_name': 'acknowledgement.receipt',
+            'report_name': 'conditional.deed.of.sale',
             'report_type':'pdf',
             'datas': datas,
         }    
@@ -114,7 +114,7 @@ class dos(osv.osv):
         res = {
 
             'type': 'ir.actions.report.xml',
-            'report_name': 'acknowledgement.receipt',
+            'report_name': 'deed.of.sale',
             'report_type':'pdf',
             'datas': datas,
         }    
