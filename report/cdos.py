@@ -35,7 +35,6 @@ from openerp.report import report_sxw
 
 class cdos(report_sxw.rml_parse):
     def __init__(self, cr, uid, name, context=None):
-        print "called!".upper()
         super(cdos, self).__init__(cr, uid, name, context=context)
         self.localcontext.update({
             'time': time, 

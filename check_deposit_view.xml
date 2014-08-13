@@ -7,14 +7,14 @@
                 <field name="type">form</field>
                 <field name="arch" type="xml">
                     <form string="Check Deposits">
-                    	<field name="bank_id" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}" />
-                    	<field name="check_number"  attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-                    	<field name="date" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-                    	<field name="amount" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-                    	<field name="journal_id" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-                    	<field name="period_id" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-                    	<field name="state" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-                
+                    	<field name="bank_id" attrs="{'readonly':[('voucher_id','!=',False)]}" />
+                    	<field name="check_number"  attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+                    	<field name="date" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+                    	<field name="amount" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+                    	<field name="journal_id" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+                    	<field name="period_id" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+                    	<field name="state" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+                		<field name="voucher_id"/>
                     </form>
                 </field>
             </record>
@@ -25,14 +25,14 @@
                 <field name="type">tree</field>
                 <field name="arch" type="xml">
                     <tree string="Check Deposits">
-                    	<field name="bank_id" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}" />
-                    	<field name="check_number"  attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-                    	<field name="date" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-                    	<field name="amount" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-                    	<field name="journal_id" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-                    	<field name="period_id" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-                    	<field name="state" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-                
+                    	<field name="bank_id" attrs="{'readonly':[('voucher_id','!=',False)]}" />
+                    	<field name="check_number"  attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+                    	<field name="date" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+                    	<field name="amount" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+                    	<field name="journal_id" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+                    	<field name="period_id" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+                    	<field name="state" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+                		<field name="voucher_id"/>
                     </tree>
                 </field>
             </record>
@@ -60,13 +60,14 @@
 	                    <group>
                         	<field name="line_ids" nolabel="1" on_change="onchange_line_ids(line_ids)">
                         		<tree string="Checks" editable="bottom">
-			                    	<field name="bank_id" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-			                    	<field name="check_number" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-			                    	<field name="date" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-			                    	<field name="amount" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-			                    	<field name="journal_id" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-			                    	<field name="period_id" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>
-			                    	<field name="state" attrs="{'readonly':[('state','=','paid'),('bank_id','!=',False),('check_number','!=',False),('amount','!=',False)]}"/>                        		
+			                    	<field name="bank_id" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+			                    	<field name="check_number" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+			                    	<field name="date" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+			                    	<field name="amount" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+			                    	<field name="journal_id" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+			                    	<field name="period_id" attrs="{'readonly':[('voucher_id','!=',False)]}"/>
+			                    	<field name="state" attrs="{'readonly':[('voucher_id','!=',False)]}"/> 
+			                    	<field name="voucher_id" invisible="1"/>                       		
                         		</tree>
                         	</field>
                         	

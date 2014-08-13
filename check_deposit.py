@@ -44,7 +44,6 @@ class glimsol_check_deposit(osv.osv):
             if context and 'line_ids' in context:
                 list_sum = []
                 for x in context['line_ids']:
-                    print "x".upper(), x
                     if x[0] == 4:
                         temp=self.pool.get('glimsol.check.deposit.line').read(cr,user,x[1],['amount'])
                         list_sum.append(temp['amount'])
@@ -69,8 +68,9 @@ class glimsol_check_deposit(osv.osv):
                     if x[0] == 4:
                         temp=self.pool.get('glimsol.check.deposit.line').read(cr,user,x[1],['amount','state'])
                         x[2]=temp                    
-                    if x[2] and x[2]['state'] == 'paid':
-                        amount_list.append(x[2]['amount'])
+                    if x[2] and 'state' in x[2] and x[2]['state'] == 'paid':
+                        if 'amount' in x[2] and x[2]['amount']:
+                            amount_list.append(x[2]['amount'])
                 res[obj.id]=sum(amount_list)            
         return res
     
@@ -89,14 +89,13 @@ class glimsol_check_deposit(osv.osv):
                     if x[0] == 4:
                         temp=self.pool.get('glimsol.check.deposit.line').read(cr,user,x[1],['amount','state'])
                         x[2]=temp                    
-                    if x[2] and  x[2]['state'] == 'returned':
+                    if x[2] and 'state' in x[2] and x[2]['state'] == 'returned':
                         amount_list.append(x[2]['amount'])
                 res[obj.id]=sum(amount_list)                
             
         return res
     
     def onchange_line_ids(self,cr,uid,ids,line_ids,context=None):
-        print "ids".upper(), ids
         res={}
         if ids:
             res={'value':{
@@ -124,18 +123,75 @@ class glimsol_check_deposit(osv.osv):
 
 class glimsol_check_deposit_line(osv.osv):
     _name="glimsol.check.deposit.line"
+    
+    def process_check_payment(self,cr,uid,cdl_id,context=None):
+        if not isinstance(cdl_id,list):
+            cdl_id = [cdl_id]
+        for temp_id in cdl_id:
+            obj=self.browse(cr,uid,temp_id)
+            av_default_data=self.pool.get('account.voucher').default_get(cr,uid,['date','payment_rate','payment_rate_currency_id','company_id'])
+            inv = obj.cd_id.invoice_id
+            temp_context={
+                    'payment_expected_currency': inv.currency_id.id,
+                    'default_partner_id': self.pool.get('res.partner')._find_accounting_partner(inv.partner_id).id,
+                    'default_amount': inv.type in ('out_refund', 'in_refund') and -inv.residual or inv.residual,
+                    'default_reference': inv.name,
+                    'close_after_process': True,
+                    'invoice_type': inv.type,
+                    'invoice_id': inv.id,
+                    'default_type': inv.type in ('out_invoice','out_refund') and 'receipt' or 'payment',
+                    'type': inv.type in ('out_invoice','out_refund') and 'receipt' or 'payment'
+                }
+            temp_av_data={
+                     'partner_id':obj.cd_id.partner_id.id,
+                     'journal_id':obj.journal_id.id,
+                     'amount':obj.amount,
+                     'currency_id':obj.cd_id.invoice_id.currency_id.id or [],
+                     'type':inv.type in ('out_invoice','out_refund') and 'receipt' or 'payment',
+    #                 'date':
+                     'context':temp_context,
+    #                  'payment_rate'
+    #                  'payment_rate_currency_id'
+    #                  'company_id'
+                     'line_cr_ids':[],
+                     }
+            av_data=av_default_data
+            av_data.update(temp_av_data)
+            #call onchange partner_id
+            onchange_partner_id_result = self.pool.get('account.voucher').onchange_partner_id(cr,uid,[],av_data['partner_id'], av_data['journal_id'], av_data['amount'], av_data['currency_id'], av_data['type'], av_data['date'], av_data['context'])
+            av_data.update(onchange_partner_id_result['value'])
+            
+            
+            #call onchange_amount
+            onchange_amount_result = self.pool.get('account.voucher').onchange_amount(cr,uid,[],av_data['amount'], av_data['payment_rate'], av_data['partner_id'], av_data['journal_id'], av_data['currency_id'], av_data['type'], av_data['date'], av_data['payment_rate_currency_id'], av_data['company_id'], av_data['context'])
+            av_data.update(onchange_amount_result['value'])
+    
+            #call onchange_journal
+            onchange_journal_result = self.pool.get('account.voucher').onchange_journal(cr,uid,[],av_data['journal_id'], av_data['line_cr_ids'], False, av_data['partner_id'], av_data['date'], av_data['amount'], av_data['type'], av_data['company_id'], av_data['context'])
+            av_data.update(onchange_journal_result['value'])
+            
+            #reformat lines ids
+            for x in ['line_cr_ids','line_dr_ids']:
+                temp_list=[(0,0,elem) for elem in av_data[x]]
+                av_data[x]=temp_list
+                    
+            vid=self.pool.get('account.voucher').create(cr,uid,av_data,context=context)
+            temp =self.pool.get('account.voucher').proforma_voucher(cr,uid,[vid],context=context)
+            #update connected cd_id.voucher_id 
+            self.pool.get('glimsol.check.deposit.line').write(cr,uid,temp_id,{'voucher_id':vid})
+        return True
+        
 
     def write(self, cr, uid, ids, vals, context=None):
         result = super(glimsol_check_deposit_line, self).write(cr, uid, ids, vals, context=context)
-        if not isinstance(ids,list):
-            ids = [ids]
-            
-            
+        if vals and 'state' in vals and vals['state'] == 'paid':
+            self.process_check_payment(cr,uid,ids)
         return result    
     
     def create(self, cr, uid, vals, context=None):
         result = super(glimsol_check_deposit_line, self).create(cr, uid, vals, context) 
-        
+        if vals and 'state' in vals and vals['state']=='paid':
+            self.process_check_payment(cr,uid,[result])
         return result
     
     def unlink(self, cr, uid, ids, context=None):
@@ -185,6 +241,7 @@ class glimsol_check_deposit_line(osv.osv):
                   ('paid','Paid'),
                   ('returned','Returned'),
                    ],    'State', select=True, readonly=False),
+              'voucher_id':fields.many2one('account.voucher','Voucher',),
               }
     _defaults = {  
         'state': 'pending',  

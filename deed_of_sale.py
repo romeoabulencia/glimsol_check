@@ -38,7 +38,6 @@ class cdos(osv.osv):
             'report_type':'pdf',
             'datas': datas,
         }    
-        print "res".upper(),res
         return res    
     
     def get_down_payment(self,cr,user,data):

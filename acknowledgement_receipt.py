@@ -39,7 +39,6 @@ class glimsol_acknowledgment_receipt(osv.osv):
             'report_type':'pdf',
             'datas': datas,
         }    
-        print "res".upper(),res
         return res
     def _get_total_cash_amount(self, cr, user, ids, name, attr, context=None):
         res = {}
