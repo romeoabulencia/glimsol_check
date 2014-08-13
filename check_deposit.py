@@ -96,12 +96,15 @@ class glimsol_check_deposit(osv.osv):
         return res
     
     def onchange_line_ids(self,cr,uid,ids,line_ids,context=None):
-        res={'value':{
-                      'cheque_number':len(line_ids),
-                      'cheque_amount':self._get_check_amount(cr, uid, ids, '','',{'line_ids':line_ids})[ids[0]],
-                      'cleared_checks':self._get_cleared_checks(cr, uid, ids, '','',{'line_ids':line_ids})[ids[0]],
-                      'return_checks':self._get_return_checks(cr, uid, ids, '','',{'line_ids':line_ids})[ids[0]]
-                      }}
+        print "ids".upper(), ids
+        res={}
+        if ids:
+            res={'value':{
+                          'cheque_number':len(line_ids),
+                          'cheque_amount':self._get_check_amount(cr, uid, ids, '','',{'line_ids':line_ids})[ids[0]],
+                          'cleared_checks':self._get_cleared_checks(cr, uid, ids, '','',{'line_ids':line_ids})[ids[0]],
+                          'return_checks':self._get_return_checks(cr, uid, ids, '','',{'line_ids':line_ids})[ids[0]]
+                          }}
         return res
     
     
@@ -144,7 +147,31 @@ class glimsol_check_deposit_line(osv.osv):
                 raise osv.except_osv(_('User Error!'), _('You cannot delete paid checks.'))
         return super(glimsol_check_deposit_line, self).unlink(
             cr, uid, ids, context=ctx)
+
+    def _get_period(self, cr, uid, context=None):
+        if context is None: context = {}
+        if context.get('period_id', False):
+            return context.get('period_id')
+        ctx = dict(context, account_period_prefer_normal=True)
+        periods = self.pool.get('account.period').find(cr, uid, context=ctx)
+        return periods and periods[0] or False        
+    
+    def _get_journal(self,cr,uid,context=None):
+        pool = self.pool.get
         
+        #search for journals having a 'check' in their name
+        cr.execute("select id from account_journal where type in ('bank','cash') and lower(name) like '%check%'")
+        check_journals = [x[0] for x in cr.fetchall()]
+        
+        if not check_journals:
+            cr.execute("select id from account_journal where type in ('bank') limit 1")
+            check_journals=[x[0] for x in cr.fetchall()]
+
+        res = []            
+        if check_journals:
+            res=check_journals[0]
+        return res
+
     _columns={
               'cd_id':fields.many2one('glimsol.check.deposit','Check Deposit',required=False),
               'bank_id':fields.many2one('res.bank', 'Bank', required=True), 
@@ -162,6 +189,8 @@ class glimsol_check_deposit_line(osv.osv):
     _defaults = {  
         'state': 'pending',  
         'date':time.strftime('%Y-%m-%d %H:%M:%S'),
+        'period_id':_get_period,
+        'journal_id':_get_journal,
                 }
     
 class invoice(osv.osv):

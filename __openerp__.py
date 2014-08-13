@@ -26,7 +26,7 @@
     'category': '',
     'description': """Glimsol Check Deposit""",
     'author': 'GLIMSOL',
-    'depends': ['sale','purchase'],
+    'depends': ['sale','purchase','qishu'],
     'data': ['check_deposit_view.xml','acknowledgement_receipt_view.xml','glimsol_check_data.xml','deed_of_sale_view.xml','stock_view.xml'],
     'demo': [],
     'test': [],
