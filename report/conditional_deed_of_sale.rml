@@ -495,11 +495,9 @@
     <para style="P2">
       <font color="white"> </font>
     </para>
-    <para style="P31" leftIndent="15" bulletIndent="0">
-<!--      <bullet size="12.0">
+    <para style="P31" leftIndent="15">
         <seq id="WW8Num1"> </seq>
-      </bullet>
- -->
+
       <font face="Helvetica" size="11.0">Down payment of </font>
       <font face="Helvetica-Bold" size="11.0">[[ num2words(o.down_payment) ]]</font>
       <font face="Helvetica-Bold" size="11.0"> </font>
@@ -511,13 +509,11 @@
     <para style="P14">
       <font color="white"> </font>
     </para>
-    <para style="P31" leftIndent="15" bulletIndent="0">
-<!--      <bullet size="12.0">
+    <para style="P31" leftIndent="15">
         <seq id="WW8Num1"/>
-      </bullet>
--->      
+  
       <font face="Helvetica" size="11.0">Full payment of </font>
-      <font face="Helvetica-Bold" size="11.0">[[ num2words(o.invoice_id.residual ]] [[ o.invoice_id.company_id.currency_id.symbol ]]</font>
+      <font face="Helvetica-Bold" size="11.0">[[ num2words(o.invoice_id.residual) ]] [[ o.invoice_id.company_id.currency_id.symbol ]]</font>
       <font face="Helvetica-Bold" size="11.0"> ONLY (</font>
       <font face="Helvetica-Bold" size="11.0">[[ o.invoice_id.company_id.currency_id.symbol ]]</font>
       <font face="Helvetica-Bold" size="11.0"> 9</font>
@@ -537,7 +533,7 @@
       <font face="Helvetica" size="11.0">.</font>
     </para>
     <para style="P12">
-      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0"> </font>
     </para>
     <blockTable colWidths="37.0,95.0,70.0,141.0,124.0" style="Table5">
       <tr>
@@ -593,7 +589,7 @@
       </tr>
     </blockTable>
     <para style="P12">
-      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0"> </font>
     </para>
     <para style="P14">
       <font color="white"> </font>
@@ -610,7 +606,7 @@
     </para>
     <para style="P12">
       <font face="Helvetica" size="11.0">Further, when the</font>
-      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0"> </font>
       <font face="Helvetica-Bold" size="11.0">VENDEE</font>
       <font face="Helvetica" size="11.0"> failed to settled the bounce check within 1</font>
       <font face="Helvetica" size="11.0">5</font>
@@ -629,7 +625,7 @@
     </para>
     <para style="P15">
       <font face="Helvetica" size="11.0">facto cease and terminate, and all payments made by him/her to said default shall be</font>
-      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0"> </font>
       <font face="Helvetica" size="11.0">deemed </font>
     </para>
     <para style="P16">forfeited and waived damages without prejudice.</para>
@@ -710,7 +706,7 @@
     </para>
     <para style="P22">
       <font face="Helvetica" size="11.0">__________________________</font>
-      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0"> </font>
       <font face="Helvetica" size="11.0">and_____________________</font>
     </para>
     <para style="P5">
@@ -791,7 +787,7 @@
       <font color="white"> .........</font>
     </para>
     <para style="P12">
-      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0"> </font>
       <font face="Helvetica-Bold" size="11.0">WITNESS MY HAND AND SEAL</font>
       <font face="Helvetica" size="11.0">, same date and place above-stated.</font>
     </para>
