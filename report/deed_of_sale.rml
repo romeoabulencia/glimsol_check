@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<document filename="test.pdf">
+  <template pageSize="(612.0,1008.0)" title="Test" author="Martin Simon" allowSplitting="20">
+    <pageTemplate id="first">
+      <frame id="first" x1="90.0" y1="36.0" width="432" height="930"/>
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table1">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table2">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table3">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+    <paraStyle name="P1" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P2" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P3" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="CENTER"/>
+    <paraStyle name="P4" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="CENTER"/>
+    <paraStyle name="P5" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="RIGHT"/>
+    <paraStyle name="P6" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P7" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P8" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P9" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P10" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P11" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P12" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P13" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P14" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P15" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P16" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY" textColor="#000000"/>
+    <paraStyle name="P17" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P18" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P19" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="CENTER"/>
+    <paraStyle name="Standard" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="Heading" fontName="Helvetica" fontSize="14.0" leading="17" alignment="JUSTIFY" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="Text body" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="List" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Caption" fontName="Helvetica-Oblique" fontSize="12.0" leading="15" alignment="JUSTIFY" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="Index" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="Header" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="Footer" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="Balloon Text" fontName="Helvetica" fontSize="8.0" leading="10" alignment="JUSTIFY"/>
+    <paraStyle name="Table Contents" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="Table Heading" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="CENTER"/>
+    <images/>
+  </stylesheet>
+  <story>
+    <para style="P19">DEED OF ABSOLUTE SALE</para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P1">KNOW ALL MEN BY THESE PRESENTS:</para>
+    <para style="P1">
+      <font color="white"> </font>
+    </para>
+    <para style="Standard">
+      <font face="Helvetica" size="11.0">That for and in consideration of the sum of</font>
+      <font face="Helvetica-Bold" size="11.0"> FIVE HUNDRED THOUSAND PESOS ONLY</font>
+      <font face="Helvetica-Bold" size="11.0"> (PHP 500,000.00)</font>
+      <font face="Helvetica" size="11.0">, Philippine Currency. We </font>
+      <font face="Helvetica-Bold" size="11.0">COMPANY NAME</font>
+      <font face="Helvetica" size="11.0">, a business duly organized and existing in accordance with Philippine Laws with office at </font>
+      <font face="Helvetica-Bold" size="11.0">FULL COMPANY ADDRESS</font>
+      <font face="Helvetica" size="11.0"> duly represented herein by its President, </font>
+      <font face="Helvetica-Bold" size="11.0">COMPANY OWNER</font>
+      <font face="Helvetica" size="11.0">, Filipino of legal age, hereafter referred to as the </font>
+      <font face="Helvetica-Bold" size="11.0">SELLER</font>
+      <font face="Helvetica" size="11.0">, have sold, transferred and conveyed by way of Absolute of Sale as by these presents, we do hereby, SELL, TRANSFER, and CONVEY </font>
+      <font face="Helvetica-Bold" size="11.0">ONE</font>
+      <font face="Helvetica-Bold" size="11.0"> (1) UNIT BRAND NEW LIUGONG FORKLIFT MODEL CLG2030H </font>
+      <font face="Helvetica" size="11.0">here under described unto:</font>
+    </para>
+    <para style="P2">
+      <font color="white"> </font>
+    </para>
+    <para style="P17">
+      <font face="Helvetica-Bold" size="11.0">CUSTOMER NAME, </font>
+      <font face="Helvetica" size="11.0">represented by </font>
+      <font face="Helvetica-Bold" size="11.0">CUSTOMER OWNER, </font>
+      <font face="Helvetica" size="11.0">Owner</font>
+      <font face="Helvetica-Bold" size="11.0">, </font>
+      <font face="Helvetica" size="11.0">with office and business address at </font>
+      <font face="Helvetica-Bold" size="11.0">FULL CUSTOMER ADDRESS</font>
+      <font face="Helvetica" size="11.0">, of legal age, Filipino citizen, hereafter referred to as the </font>
+      <font face="Helvetica-Bold" size="11.0">VENDEE</font>
+      <font face="Helvetica" size="11.0">;</font>
+    </para>
+    <para style="P3">
+      <font color="white"> </font>
+    </para>
+    <para style="P3">BRAND NEW LIUGONG FORKLIFT MODEL CLG2030H</para>
+    <para style="P3">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="228.0,21.0,259.0" style="Table1">
+      <tr>
+        <td>
+          <para style="P5">MODEL</para>
+        </td>
+        <td>
+          <para style="P4">:</para>
+        </td>
+        <td>
+          <para style="P6">CLG2030H</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">CHASSIS NO.</para>
+        </td>
+        <td>
+          <para style="P4">:</para>
+        </td>
+        <td>
+          <para style="P9">C001069</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">ENGINE MODEL</para>
+        </td>
+        <td>
+          <para style="P4">:</para>
+        </td>
+        <td>
+          <para style="P16">A490BPG</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">ENGINE NO.</para>
+        </td>
+        <td>
+          <para style="P4">:</para>
+        </td>
+        <td>
+          <para style="P9">903897</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P4">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P7">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="Standard">
+      <font color="white"> </font>
+    </para>
+    <para style="P18">That we, thereof warrants that the above mentioned motor vehicle subject of this sale is free from any liens and encumbrances.</para>
+    <para style="P18">
+      <font color="white"> </font>
+    </para>
+    <para style="P10">
+      <font color="white"> .........</font>
+    </para>
+    <para style="P10">IN WITNESS THEREOF, I hereby affixed my signature this ____ day of ___________2014 at Pasig City.</para>
+    <para style="P10">
+      <font color="white"> </font>
+    </para>
+    <para style="P13">COMFORME:</para>
+    <para style="P14">BUYER</para>
+    <para style="P14">
+      <font color="white"> </font>
+    </para>
+    <para style="P14">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="485.0" style="Table2">
+      <tr>
+        <td>
+          <para style="P15">________________</para>
+          <para style="P2">CUSTOMER OWNER</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P7">CUSTOMER NAME</para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="Standard">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">SELLER<font color="white"> .........</font><font color="white"> .........</font></para>
+    <para style="P8"/>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">___________________________</para>
+    <para style="P1">COMPANY OWNER</para>
+    <para style="P1">COMPANY NAME</para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">Signed in the presence of:</para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">___________________________<font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font>_________________________</para>
+    <para style="P3">
+      <font color="white"> </font>
+    </para>
+    <para style="P3">
+      <font color="white"> </font>
+    </para>
+    <para style="P3">
+      <font color="white"> </font>
+    </para>
+    <para style="P3">
+      <font color="white"> </font>
+    </para>
+    <para style="P3">ACKNOWLEDGMENT</para>
+    <para style="P10">
+      <font color="white"> </font>
+    </para>
+    <para style="P10">
+      <font color="white"> </font>
+    </para>
+    <para style="P10">REPUBLIC OF THE PHILIPPINES)</para>
+    <para style="P10">Pasig City ) S.S.</para>
+    <para style="P10">
+      <font color="white"> </font>
+    </para>
+    <para style="P10">BEFORE ME, a Notary Public for and in _________ Pasig City, personally appeared:</para>
+    <para style="P10">
+      <font color="white"> </font>
+    </para>
+    <para style="P10">
+      <font color="white"> .........</font>
+    </para>
+    <blockTable colWidths="203.0,234.0" style="Table3">
+      <tr>
+        <td>
+          <para style="P7">COMPANY OWNER</para>
+        </td>
+        <td>
+          <para style="P4">CUSTOMER OWNER</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P12">SSS NO. : 33-7452868-4 </para>
+          <para style="P11">Drivers License No.: N25-99-061856 </para>
+          <para style="P11">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P6">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="Standard">
+      <font color="white"> </font>
+    </para>
+    <para style="P10">Known to me and to me known to be the same persons who executed the foregoing deed, and acknowledged to me that the same is their own free and voluntary acts and deeds as well as that of the corporation herein represented.</para>
+    <para style="P10">
+      <font color="white"> </font>
+    </para>
+    <para style="P10">IN WITNESS WHEREOF, I have hereunto affixed my notarial seal on the date and at the place hereinabove written.</para>
+    <para style="P2">
+      <font color="white"> </font>
+    </para>
+    <para style="P2">
+      <font color="white"> </font>
+    </para>
+    <para style="P2"><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font>NOTARY PUBLIC</para>
+    <para style="P2">
+      <font color="white"> </font>
+    </para>
+    <para style="P2">
+      <font color="white"> </font>
+    </para>
+    <para style="P2">Doc. No.<font color="white"> .........</font><font color="white"> .........</font>:</para>
+    <para style="P2">Page No.<font color="white"> .........</font><font color="white"> .........</font>:</para>
+    <para style="P2">Book No.<font color="white"> .........</font><font color="white"> .........</font>:</para>
+    <para style="P2">Series of 2014</para>
+    <para style="P1">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P8"/>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+  </story>
+</document>
+
