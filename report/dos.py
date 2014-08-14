@@ -26,7 +26,7 @@ from num2words import num2words
 import datetime
 
 try:
-    del Service._services['report.conditional.deed.of.sale']
+    del Service._services['report.deed.of.sale']
 except:
     pass
 
