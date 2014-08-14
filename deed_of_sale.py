@@ -89,7 +89,7 @@ class cdos(osv.osv):
     
     _columns={
               'invoice_id':fields.many2one('account.invoice','Invoice',required=False),
-              'company_id':fields.many2one('res.partner', 'Company', domain=[('is_company','=',True)]), 
+              'ccompany_id':fields.many2one('res.partner', 'Company', domain=[('is_company','=',True)]), 
               'company_user_id':fields.many2one('res.partner','Company Owner',domain=[('is_company','=',False)]),
               'customer_id':fields.many2one('res.partner','Customer',domain=[('is_company','=',True)]),
               'customer_user_id': fields.many2one('res.partner','Customer Owner',domain=[('is_company','=',False)]),
