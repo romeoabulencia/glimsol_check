@@ -83,15 +83,14 @@ class glimsol_acknowledgment_receipt(osv.osv):
               'date': fields.date('Date',required=True),
               'cdos_reference':fields.char('CDOS Reference',size=64,required=True),
               'invoice_id':fields.many2one('account.invoice','Invoice Reference',required=True),
+              'recieve_user_id':fields.many2one('res.users','Received By',required=True),
 #               'recieve_user_id':fields.many2one('res.partner','Received By',required=True,domain=[('employee','=',True)]),
-                'recieve_user_id':fields.many2one('res.users','Received By',required=True),
               'trade_in':fields.char('Total trade-in amount', size=64, required=False, readonly=False),
               'trade_in_ref':fields.char('Trade in reference',size=64,required=False,redonly=False),
               'quote_ref':fields.char('Quotation Reference',size=64,required=False,readonly=False),
               'po_ref':fields.char('PO Reference',size=64,required=False,readonly=False),
               'dr_ref':fields.char('DR Reference',size=64,required=False,readonly=False),
-#               'sales_puser_id':fields.many2one('res.partner','Sales Person',domain=[('employee','=',True)])
-                'sales_puser_id':fields.many2one('res.users','Sales Person')
+              'sales_puser_id':fields.many2one('res.partner','Sales Person',domain=[('employee','=',True)])
 
               }
     _defaults = {  

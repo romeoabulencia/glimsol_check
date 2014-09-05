@@ -116,6 +116,8 @@ class glimsol_check_deposit(osv.osv):
               'cheque_amount':fields.function(_get_check_amount, method=True, type='float', string='Total amount of checks', store=False),
               'cleared_checks':fields.function(_get_cleared_checks,method=True,type='float', string="Total amount of checks cleared",store=False),
               'return_checks':fields.function(_get_return_checks,method=True,type='float',string="Total amount of return checks",store=False),
+              'payment_ref':fields.char('Payment Ref',size=64, required=False, readonly=False),
+              'memo':fields.char('Memo',size=64, required=False,redonly=False),              
               }
     _defaults={
         'date':time.strftime('%Y-%m-%d %H:%M:%S'),
@@ -243,12 +245,13 @@ class glimsol_check_deposit_line(osv.osv):
                    ],    'State', select=True, readonly=False),
               'voucher_id':fields.many2one('account.voucher','Voucher',),
               }
+    
     _defaults = {  
         'state': 'pending',  
         'date':time.strftime('%Y-%m-%d %H:%M:%S'),
         'period_id':_get_period,
         'journal_id':_get_journal,
-                }
+        }
     
 class invoice(osv.osv):
     _inherit = 'account.invoice'
